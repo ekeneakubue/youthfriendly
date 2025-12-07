@@ -7,18 +7,19 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#services", label: "Services" },
-    { href: "#events", label: "Events" },
-    { href: "#gallery", label: "Gallery" },
-    { href: "#contact", label: "Contact" },
+    { href: "/#home", label: "Home" },
+    { href: "/#about", label: "About" },
+    { href: "/#services", label: "Services" },
+    { href: "/#events", label: "Events" },
+    { href: "/food-bank", label: "Food Bank" },
+    { href: "/#gallery", label: "Gallery" },
+    { href: "/#contact", label: "Contact" },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur border-b border-black/10 dark:border-white/10">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="#home" className="flex items-center gap-2">
+        <Link href="/#home" className="flex items-center gap-2">
           <span className="inline-block h-12 w-12 rounded" aria-hidden ><img src="/images/logo.png" /></span>
           <span className="font-semibold tracking-tight">Youth Friendly Resource Center, UNN</span>
         </Link>
@@ -44,9 +45,9 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-6 text-sm">
           {navItems.map((item) => (
             <li key={item.href}>
-              <a href={item.href} className="hover:text-emerald-600 transition-colors">
+              <Link href={item.href} className="hover:text-emerald-600 transition-colors">
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -57,13 +58,13 @@ export default function Navbar() {
           <ul className="max-w-7xl mx-auto px-6 py-3 grid gap-3 text-sm">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
                   className="block py-2 hover:text-emerald-600"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

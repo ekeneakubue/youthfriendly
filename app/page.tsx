@@ -44,11 +44,11 @@ export default function Home() {
               },
               {
                 title: "Skills Development",
-                desc: "Digital literacy, leadership, and entrepreneurship training.",
+                desc: "Digital literacy, leadership, entrepreneurship training and internship opportunities.",
               },
               {
-                title: "Career Support",
-                desc: "CV reviews, mentorship, and internship opportunities.",
+                title: "Food Bank",
+                desc: "Supporting University of Nigeria students (UNN, UNEC, Ituku-Ozalla) with essential food supplies. Helping students focus on their education without worrying about their next meal.",
               },
             ].map((s) => (
               <div key={s.title} className="rounded-lg border border-black/10 dark:border-white/10 p-6 bg-background">

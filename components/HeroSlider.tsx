@@ -76,19 +76,27 @@ export default function HeroSlider() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col items-start justify-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight max-w-3xl drop-shadow-[0_1px_2px_rgba(0,0,0,0.25)]">
-            {slide.title}
-          </h1>
-          <p className="mt-4 text-base sm:text-lg md:text-xl text-emerald-950/90 max-w-2xl drop-shadow-[0_1px_2px_rgba(255,255,255,0.4)]">
-            {slide.subtitle}
-          </p>
-          <div className="mt-8 flex gap-3">
-            <a href="#services" className="px-5 py-3 text-sm rounded bg-emerald-600 text-white hover:bg-emerald-700">
-              Explore Services
-            </a>
-            <a href="#contact" className="px-5 py-3 text-sm rounded border border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white">
-              Get Involved
-            </a>
+          <div className="max-w-xl rounded-2xl bg-black/45 backdrop-blur-md px-5 py-6 sm:px-8 sm:py-7 shadow-2xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+              {slide.title}
+            </h1>
+            <p className="mt-4 text-base sm:text-lg md:text-xl text-white/90 max-w-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
+              {slide.subtitle}
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href="#services"
+                className="px-5 py-3 text-sm rounded bg-emerald-500 text-white font-medium hover:bg-emerald-600 shadow-md hover:shadow-lg transition"
+              >
+                Explore Services
+              </a>
+              <a
+                href="#contact"
+                className="px-5 py-3 text-sm rounded border border-emerald-300 text-emerald-100 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white transition"
+              >
+                Get Involved
+              </a>
+            </div>
           </div>
         </div>
 

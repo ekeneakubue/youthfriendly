@@ -56,7 +56,10 @@ export default function HeroSlider() {
   const slide = SLIDES[index];
 
   return (
-    <section id="home" className="relative overflow-hidden bg-black text-white">
+    <section
+      id="home"
+      className="relative overflow-hidden bg-gradient-to-b from-emerald-200 via-emerald-100 to-white text-emerald-950"
+    >
       <div className="relative h-[56vh] sm:h-[64vh] md:h-[72vh] lg:h-[80vh]">
         {/* Background image */}
         <div className="absolute inset-0">
@@ -64,17 +67,19 @@ export default function HeroSlider() {
             src={slide.image}
             alt={slide.title}
             fill
-            className="object-cover opacity-20 brightness-125 contrast-110 saturate-125"
+            className="object-cover opacity-70 brightness-110 contrast-105 saturate-115"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
+          {/* Much lighter overlays so images stay bright but text remains readable */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/0 to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-emerald-200/25 via-transparent to-emerald-100/10" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col items-start justify-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight max-w-3xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight max-w-3xl drop-shadow-[0_1px_2px_rgba(0,0,0,0.25)]">
             {slide.title}
           </h1>
-          <p className="mt-4 text-base sm:text-lg md:text-xl text-white/80 max-w-2xl">
+          <p className="mt-4 text-base sm:text-lg md:text-xl text-emerald-950/90 max-w-2xl drop-shadow-[0_1px_2px_rgba(255,255,255,0.4)]">
             {slide.subtitle}
           </p>
           <div className="mt-8 flex gap-3">

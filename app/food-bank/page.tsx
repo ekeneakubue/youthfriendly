@@ -1,6 +1,4 @@
 import Link from "next/link";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
 
 export default function FoodBankPage() {
   // Mock data - will be replaced with database queries later
@@ -287,7 +285,7 @@ export default function FoodBankPage() {
             Student Beneficiaries
           </h2>
           <p className="text-xl text-gray-600">
-            University students we've supported through our food bank program
+            University students we&apos;ve supported through our food bank program
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -331,7 +329,7 @@ export default function FoodBankPage() {
             Food Distribution Events
           </h2>
           <p className="text-xl text-gray-600">
-            Join us in our upcoming events or see the impact we've made
+            Join us in our upcoming events or see the impact we&apos;ve made
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

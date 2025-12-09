@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
 
 export default function DonatePage() {
   const [formData, setFormData] = useState({
@@ -97,7 +95,7 @@ export default function DonatePage() {
               </h2>
               <p className="text-lg text-gray-600 mb-6">
                 Your contribution will help support university students in need.
-                We'll be in touch with you shortly.
+                We&apos;ll be in touch with you shortly.
               </p>
               <Link
                 href="/food-bank"

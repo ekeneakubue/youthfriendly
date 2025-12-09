@@ -151,12 +151,62 @@ export default function Home() {
           <div className="grid gap-4 content-start">
             <div className="rounded-lg border border-black/10 dark:border-white/10 p-6 bg-background">
               <h3 className="font-semibold">Visit Us</h3>
-              <p className="mt-2 text-sm text-foreground/70">University of Nigeria, Nsukka campus</p>
+              <p className="mt-2 text-sm text-foreground/70">Youth Friendly Resource Center, University of Nigeria, Nsukka</p>
             </div>
             <div className="rounded-lg border border-black/10 dark:border-white/10 p-6 bg-background">
               <h3 className="font-semibold">Contact</h3>
               <p className="mt-2 text-sm text-foreground/70">youthfriendly@unn.edu.ng</p>
-              <p className="text-sm text-foreground/70">+234 000 000 0000</p>
+              <p className="text-sm text-foreground/70">+234 803 868 4409</p>
+
+              <div className="mt-4">
+                <p className="text-xs font-semibold uppercase tracking-wide text-foreground/60">
+                  Connect with us
+                </p>
+                <div className="mt-2 flex gap-3">
+                  <a
+                    href="#"
+                    aria-label="Visit our Facebook page"
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white hover:bg-emerald-700 transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      className="h-4 w-4"
+                      fill="currentColor"
+                    >
+                      <path d="M22 12.07C22 6.48 17.52 2 11.93 2 6.35 2 1.87 6.48 1.87 12.07c0 4.77 3.44 8.72 7.94 9.6v-6.79H7.66v-2.81h2.15V9.41c0-2.13 1.27-3.31 3.22-3.31.93 0 1.91.17 1.91.17v2.1h-1.08c-1.07 0-1.41.67-1.41 1.36v1.64h2.39l-.38 2.81h-2.01v6.79c4.5-.88 7.94-4.83 7.94-9.6Z" />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Visit our Instagram profile"
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white hover:bg-emerald-700 transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      className="h-4 w-4"
+                      fill="currentColor"
+                    >
+                      <path d="M7 3C4.24 3 2 5.24 2 8v8c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V8c0-2.76-2.24-5-5-5H7Zm0 2h10c1.66 0 3 1.34 3 3v8c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V8c0-1.66 1.34-3 3-3Zm9.5 1a1.5 1.5 0 0 0-1.06 2.56A1.5 1.5 0 1 0 16.5 6Zm-5.5 1.5A4.5 4.5 0 0 0 6.5 12 4.5 4.5 0 0 0 11 16.5 4.5 4.5 0 0 0 15.5 12 4.5 4.5 0 0 0 11 7.5Zm0 2A2.5 2.5 0 0 1 13.5 12 2.5 2.5 0 0 1 11 14.5 2.5 2.5 0 0 1 8.5 12 2.5 2.5 0 0 1 11 9.5Z" />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Visit our X (Twitter) profile"
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white hover:bg-emerald-700 transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      className="h-4 w-4"
+                      fill="currentColor"
+                    >
+                      <path d="M18.5 3h-3l-3.03 4.39L9 3H5.5L10 9.79 5 17h3l3.22-4.67L15 17h3.5L13.5 9.21 18.5 3Z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

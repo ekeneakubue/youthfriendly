@@ -357,7 +357,7 @@ export default function DonatePage() {
               {/* Message */}
               <div className="border-t border-gray-200 pt-6">
                 <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Message (Optional)
+                  Specify the Category of Students You Want to Support (All, First Year, students from your state, Constituency, Village, Department or faculty)
                 </label>
                 <textarea
                   id="message"

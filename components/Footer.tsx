@@ -16,11 +16,31 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-3">Quick Links</h4>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li><a href="#about" className="hover:text-emerald-600">About</a></li>
-            <li><a href="#services" className="hover:text-emerald-600">Services</a></li>
-            <li><a href="#events" className="hover:text-emerald-600">Events</a></li>
-            <li><a href="#gallery" className="hover:text-emerald-600">Gallery</a></li>
-            <li><a href="#contact" className="hover:text-emerald-600">Contact</a></li>
+            <li>
+              <Link href="/#about" className="hover:text-emerald-300">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/#services" className="hover:text-emerald-300">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/#events" className="hover:text-emerald-300">
+                Events
+              </Link>
+            </li>
+            <li>
+              <Link href="/#gallery" className="hover:text-emerald-300">
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link href="/#contact" className="hover:text-emerald-300">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
@@ -28,7 +48,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-gray-300">
             <li>University of Nigeria, Nsukka</li>
             <li>Email: youthfriendly@unn.edu.ng</li>
-            <li>Phone: +234 000 000 0000</li>
+            <li>Phone: +234 803 868 4409</li>
           </ul>
         </div>
       </div>
@@ -36,9 +56,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-4 text-xs text-foreground/60 flex items-center justify-between text-gray-300">
           <span>© {new Date().getFullYear()} Youth Friendly RC, UNN. All rights reserved.</span>
           <div className="flex items-center gap-4">
-            <Link href="#" className="hover:text-emerald-600">Twitter</Link>
-            <Link href="#" className="hover:text-emerald-600">Facebook</Link>
-            <Link href="#" className="hover:text-emerald-600">Instagram</Link>
+            Powered by <Link href="https://www.gigoplanet.com" className="hover:text-emerald-600" target="_blank">Gigoplanet Services Ltd.</Link>
           </div>
         </div>
       </div>

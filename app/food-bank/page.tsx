@@ -192,10 +192,10 @@ export default function FoodBankPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="text-center">
           <div className="text-7xl mb-6">🎓🍚</div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-            Village Market
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            Youth Friendly Resource Center, UNN
             <br />
-            <span className="bg-linear-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-green-700 to-green-900 bg-clip-text text-transparent">
               Student Food Bank
             </span>
           </h1>
@@ -207,25 +207,25 @@ export default function FoodBankPage() {
           {/* Stats Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
             <div className="bg-white rounded-xl p-6 shadow-md">
-              <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">
+              <div className="text-2xl md:text-2xl font-bold text-green-600 mb-2">
                 {stats.totalDonors}
               </div>
               <div className="text-gray-600 text-sm md:text-base">Total Donors</div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-md">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+              <div className="text-2xl md:text-2xl font-bold text-blue-600 mb-2">
                 {stats.totalBeneficiaries}
               </div>
               <div className="text-gray-600 text-sm md:text-base">Students Helped</div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-md">
-              <div className="text-3xl md:text-4xl font-bold text-orange-600 mb-2">
+              <div className="text-2xl md:text-2xl font-bold text-orange-600 mb-2">
                 {stats.foodDistributed}
               </div>
               <div className="text-gray-600 text-sm md:text-base">Food Distributed</div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-md">
-              <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">
+              <div className="text-2xl md:text-2xl font-bold text-purple-600 mb-2">
                 {stats.activeEvents}
               </div>
               <div className="text-gray-600 text-sm md:text-base">Active Events</div>

@@ -13,7 +13,7 @@ export default function Navbar() {
     { href: "/#events", label: "Events" },
     { href: "/food-bank", label: "Food Bank" },
     { href: "/#gallery", label: "Gallery" },
-    { href: "/#contact", label: "Contact" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (

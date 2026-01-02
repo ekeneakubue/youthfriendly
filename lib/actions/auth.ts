@@ -69,7 +69,7 @@ export async function getSession() {
         }
 
         return JSON.parse(session.value);
-    } catch (error) {
+    } catch {
         return null;
     }
 }

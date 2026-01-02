@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -20,7 +21,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur border-b border-black/10 dark:border-white/10">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/#home" className="flex items-center gap-2">
-          <span className="inline-block h-12 w-12 rounded" aria-hidden ><img src="/images/logo.png" /></span>
+          <Image src="/images/logo.png" alt="YFRC Logo" width={48} height={48} className="rounded" />
           <span className="font-semibold tracking-tight">Youth Friendly Resource Center, UNN</span>
         </Link>
 

@@ -1,6 +1,20 @@
-import HeroSlider from "../components/HeroSlider";
+import HeroSlider from "../../components/HeroSlider";
+import { getActiveServices } from "@/lib/actions/services";
+import { Heart, BookOpen, HandHeart, Rocket, CheckCircle2 } from "lucide-react";
 
-export default function Home() {
+export default async function Home() {
+  const services = await getActiveServices();
+
+  const getIcon = (category: string) => {
+    switch (category) {
+      case "HEALTH": return <Heart className="h-6 w-6" />;
+      case "EDUCATION": return <BookOpen className="h-6 w-6" />;
+      case "WELFARE": return <HandHeart className="h-6 w-6" />;
+      case "SKILLS": return <Rocket className="h-6 w-6" />;
+      default: return <CheckCircle2 className="h-6 w-6" />;
+    }
+  };
+
   return (
     <main>
       <HeroSlider />
@@ -21,10 +35,10 @@ export default function Home() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <img src="/images/1.webp" />
-            <img src="/images/2.webp" />
-            <img src="/images/3.webp" />
-            <img src="/images/4.webp" />            
+            <img src="/images/1.webp" alt="Youth Friendly Center 1" />
+            <img src="/images/2.webp" alt="Youth Friendly Center 2" />
+            <img src="/images/3.webp" alt="Youth Friendly Center 3" />
+            <img src="/images/4.webp" alt="Youth Friendly Center 4" />
           </div>
         </div>
       </section>
@@ -32,31 +46,29 @@ export default function Home() {
       {/* Services */}
       <section id="services" className="py-16 bg-black/5 dark:bg-white/5">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl sm:text-3xl font-semibold">Services</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold">Our Services</h2>
           <p className="mt-2 text-foreground/70 max-w-2xl">
             Practical programs and resources tailored for youth.
           </p>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-            {[
-              {
-                title: "Health & Wellness",
-                desc: "Peer education, counseling referrals, and wellbeing workshops.",
-              },
-              {
-                title: "Skills Development",
-                desc: "Digital literacy, leadership, entrepreneurship training and internship opportunities.",
-              },
-              {
-                title: "Food Bank",
-                desc: "Supporting University of Nigeria students (UNN, UNEC, Ituku-Ozalla) with essential food supplies. Helping students focus on their education without worrying about their next meal.",
-              },
-            ].map((s) => (
-              <div key={s.title} className="rounded-lg border border-black/10 dark:border-white/10 p-6 bg-background">
-                <div className="h-10 w-10 rounded bg-emerald-600 mb-4" />
-                <h3 className="font-semibold">{s.title}</h3>
-                <p className="mt-2 text-sm text-foreground/70">{s.desc}</p>
+            {services.length > 0 ? (
+              services.map((s) => (
+                <div key={s.id} className="rounded-2xl border border-black/10 dark:border-white/10 p-8 bg-background shadow-sm hover:shadow-md transition-all group">
+                  <div className="h-12 w-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                    {getIcon(s.category)}
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 mb-2 block">
+                    {s.category}
+                  </span>
+                  <h3 className="text-xl font-bold mb-3">{s.title}</h3>
+                  <p className="text-sm text-foreground/70 leading-relaxed line-clamp-4">{s.description}</p>
+                </div>
+              ))
+            ) : (
+              <div className="col-span-full py-12 text-center text-foreground/50 italic border-2 border-dashed border-black/5 rounded-2xl">
+                More services coming soon...
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -94,34 +106,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-semibold">Gallery</h2>
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-            <img src="/images/5.webp" />
-            <img src="/images/6.webp" />
-            <img src="/images/7.webp" />
-            <img src="/images/8.webp" />
-            <img src="/images/9.webp" />
-            <img src="/images/10.webp" />
-            <img src="/images/11.webp" />
-            <img src="/images/12.webp" />
-            <img src="/images/13.webp" />
-            <img src="/images/14.webp" />
-            <img src="/images/15.webp" />
-            <img src="/images/16.webp" />
-            <img src="/images/17.webp" />
-            <img src="/images/18.webp" />
-            <img src="/images/19.webp" />
-            <img src="/images/20.webp" />
-            <img src="/images/21.webp" />
-            <img src="/images/22.webp" />
-            <img src="/images/23.webp" />
-            <img src="/images/24.webp" />
-            <img src="/images/25.webp" />
-            <img src="/images/26.webp" />
-            <img src="/images/27.webp" />
-            <img src="/images/28.webp" />
-            <img src="/images/29.webp" />
-            <img src="/images/30.webp" />
-            <img src="/images/31.webp" />
-            <img src="/images/32.webp" />
+            {[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32].map(num => (
+              <img key={num} src={`/images/${num}.webp`} alt={`Gallery image ${num}`} />
+            ))}
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { recordDonation } from "@/lib/actions/donations";
 
 export default function DonatePage() {
   const [formData, setFormData] = useState({
@@ -32,26 +33,35 @@ export default function DonatePage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-    setIsSubmitting(false);
-    setSubmitSuccess(true);
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        donationType: "monetary",
-        amount: "",
-        foodItems: "",
-        frequency: "one-time",
-        message: "",
+    try {
+      const form = new FormData();
+      Object.entries(formData).forEach(([key, value]) => {
+        form.append(key, value);
       });
-      setSubmitSuccess(false);
-    }, 3000);
+
+      await recordDonation(form);
+
+      setIsSubmitting(false);
+      setSubmitSuccess(true);
+
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          donationType: "monetary",
+          amount: "",
+          foodItems: "",
+          frequency: "one-time",
+          message: "",
+        });
+        setSubmitSuccess(false);
+      }, 3000);
+    } catch (error) {
+      alert("Failed to process donation. Please try again.");
+      setIsSubmitting(false);
+    }
   };
 
   const suggestedAmounts = [5000, 10000, 25000, 50000, 100000];
@@ -78,7 +88,7 @@ export default function DonatePage() {
             Make a Donation
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Your generosity helps university students focus on their education. 
+            Your generosity helps university students focus on their education.
             Every contribution makes a difference.
           </p>
         </div>
@@ -111,7 +121,7 @@ export default function DonatePage() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   Your Information
                 </h2>
-                
+
                 <div className="space-y-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -168,16 +178,15 @@ export default function DonatePage() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   Donation Type
                 </h2>
-                
+
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <button
                     type="button"
                     onClick={() => setFormData({ ...formData, donationType: "monetary" })}
-                    className={`p-6 rounded-xl border-2 transition-all ${
-                      formData.donationType === "monetary"
-                        ? "border-green-600 bg-green-50 shadow-md"
-                        : "border-gray-200 hover:border-green-300"
-                    }`}
+                    className={`p-6 rounded-xl border-2 transition-all ${formData.donationType === "monetary"
+                      ? "border-green-600 bg-green-50 shadow-md"
+                      : "border-gray-200 hover:border-green-300"
+                      }`}
                   >
                     <div className="text-4xl mb-2">💵</div>
                     <div className="font-semibold text-gray-900">Monetary</div>
@@ -187,11 +196,10 @@ export default function DonatePage() {
                   <button
                     type="button"
                     onClick={() => setFormData({ ...formData, donationType: "food" })}
-                    className={`p-6 rounded-xl border-2 transition-all ${
-                      formData.donationType === "food"
-                        ? "border-green-600 bg-green-50 shadow-md"
-                        : "border-gray-200 hover:border-green-300"
-                    }`}
+                    className={`p-6 rounded-xl border-2 transition-all ${formData.donationType === "food"
+                      ? "border-green-600 bg-green-50 shadow-md"
+                      : "border-gray-200 hover:border-green-300"
+                      }`}
                   >
                     <div className="text-4xl mb-2">🍚</div>
                     <div className="font-semibold text-gray-900">Food Items</div>
@@ -214,11 +222,10 @@ export default function DonatePage() {
                             onClick={() =>
                               setFormData({ ...formData, amount: amount.toString() })
                             }
-                            className={`py-3 px-2 rounded-lg border-2 font-semibold transition-all text-sm ${
-                              formData.amount === amount.toString()
-                                ? "border-green-600 bg-green-50 text-green-700"
-                                : "border-gray-200 hover:border-green-300"
-                            }`}
+                            className={`py-3 px-2 rounded-lg border-2 font-semibold transition-all text-sm ${formData.amount === amount.toString()
+                              ? "border-green-600 bg-green-50 text-green-700"
+                              : "border-gray-200 hover:border-green-300"
+                              }`}
                           >
                             ₦{(amount / 1000).toFixed(0)}k
                           </button>
@@ -275,11 +282,10 @@ export default function DonatePage() {
                                 });
                               }
                             }}
-                            className={`py-2 px-4 rounded-full border-2 font-medium transition-all text-sm ${
-                              formData.foodItems.includes(item)
-                                ? "border-green-600 bg-green-50 text-green-700"
-                                : "border-gray-200 hover:border-green-300"
-                            }`}
+                            className={`py-2 px-4 rounded-full border-2 font-medium transition-all text-sm ${formData.foodItems.includes(item)
+                              ? "border-green-600 bg-green-50 text-green-700"
+                              : "border-gray-200 hover:border-green-300"
+                              }`}
                           >
                             {item}
                           </button>
@@ -311,16 +317,15 @@ export default function DonatePage() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
                   Donation Frequency
                 </h2>
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <button
                     type="button"
                     onClick={() => setFormData({ ...formData, frequency: "one-time" })}
-                    className={`p-4 rounded-xl border-2 transition-all ${
-                      formData.frequency === "one-time"
-                        ? "border-green-600 bg-green-50"
-                        : "border-gray-200 hover:border-green-300"
-                    }`}
+                    className={`p-4 rounded-xl border-2 transition-all ${formData.frequency === "one-time"
+                      ? "border-green-600 bg-green-50"
+                      : "border-gray-200 hover:border-green-300"
+                      }`}
                   >
                     <div className="font-semibold text-gray-900">One-Time</div>
                     <div className="text-sm text-gray-600">Single donation</div>
@@ -329,11 +334,10 @@ export default function DonatePage() {
                   <button
                     type="button"
                     onClick={() => setFormData({ ...formData, frequency: "monthly" })}
-                    className={`p-4 rounded-xl border-2 transition-all ${
-                      formData.frequency === "monthly"
-                        ? "border-green-600 bg-green-50"
-                        : "border-gray-200 hover:border-green-300"
-                    }`}
+                    className={`p-4 rounded-xl border-2 transition-all ${formData.frequency === "monthly"
+                      ? "border-green-600 bg-green-50"
+                      : "border-gray-200 hover:border-green-300"
+                      }`}
                   >
                     <div className="font-semibold text-gray-900">Monthly</div>
                     <div className="text-sm text-gray-600">Recurring donation</div>
@@ -342,11 +346,10 @@ export default function DonatePage() {
                   <button
                     type="button"
                     onClick={() => setFormData({ ...formData, frequency: "quarterly" })}
-                    className={`p-4 rounded-xl border-2 transition-all ${
-                      formData.frequency === "quarterly"
-                        ? "border-green-600 bg-green-50"
-                        : "border-gray-200 hover:border-green-300"
-                    }`}
+                    className={`p-4 rounded-xl border-2 transition-all ${formData.frequency === "quarterly"
+                      ? "border-green-600 bg-green-50"
+                      : "border-gray-200 hover:border-green-300"
+                      }`}
                   >
                     <div className="font-semibold text-gray-900">Quarterly</div>
                     <div className="text-sm text-gray-600">Every 3 months</div>
@@ -375,11 +378,10 @@ export default function DonatePage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full py-4 rounded-full text-lg font-bold transition-all shadow-lg ${
-                    isSubmitting
-                      ? "bg-gray-400 cursor-not-allowed"
-                      : "bg-green-600 hover:bg-green-700 text-white transform hover:scale-105"
-                  }`}
+                  className={`w-full py-4 rounded-full text-lg font-bold transition-all shadow-lg ${isSubmitting
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-green-600 hover:bg-green-700 text-white transform hover:scale-105"
+                    }`}
                 >
                   {isSubmitting ? (
                     <span className="flex items-center justify-center gap-2">

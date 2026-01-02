@@ -1,0 +1,97 @@
+datasource db {
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum ServiceStatus {
+  ACTIVE
+  DRAFT
+  HIDDEN
+}
+
+enum ServiceCategory {
+  HEALTH
+  EDUCATION
+  WELFARE
+  SKILLS
+}
+
+enum UserRole {
+  ADMIN
+  MODERATOR
+  STUDENT
+}
+
+model User {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  password  String
+  name      String
+  role      UserRole  @default(STUDENT)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@map("users")
+}
+
+model Service {
+  id          String          @id @default(cuid())
+  title       String
+  description String
+  status      ServiceStatus   @default(DRAFT)
+  category    ServiceCategory
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+
+  @@map("services")
+}
+
+model Donor {
+  id            String            @id @default(cuid())
+  name          String
+  email         String            @unique
+  phone         String?
+  donations     Donation[]
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+
+  @@map("donors")
+}
+
+model Donation {
+  id          String            @id @default(cuid())
+  donorId     String
+  donor       Donor             @relation(fields: [donorId], references: [id], onDelete: Cascade)
+  type        DonationType
+  amount      Float?            // For monetary donations (in Naira)
+  items       String?           // For food/item descriptions
+  frequency   DonationFrequency @default(ONE_TIME)
+  status      DonationStatus    @default(VERIFIED)
+  note        String?
+  date        DateTime          @default(now())
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  @@map("donations")
+}
+
+enum DonationStatus {
+  VERIFIED
+  PROCESSING
+  FLAGGED
+}
+
+enum DonationType {
+  MONETARY
+  FOOD
+  OTHER
+}
+
+enum DonationFrequency {
+  ONE_TIME
+  MONTHLY
+  QUARTERLY
+}

@@ -1,57 +1,30 @@
 import Link from "next/link";
+import { getDonors } from "@/lib/actions/donors";
 
-export default function FoodBankPage() {
-  // Mock data - will be replaced with database queries later
-  const recentDonors = [
-    {
-      id: "1",
-      name: "Sarah Johnson",
-      amount: 50000,
-      items: "Rice, Beans, Cooking Oil",
-      date: "2024-12-05",
-      avatar: "👩‍💼",
-    },
-    {
-      id: "2",
-      name: "Michael Chen",
-      amount: 75000,
-      items: "Yam, Garri, Palm Oil",
-      date: "2024-12-04",
-      avatar: "👨‍💼",
-    },
-    {
-      id: "3",
-      name: "Amina Ibrahim",
-      amount: 40000,
-      items: "Beans, Tomatoes, Onions",
-      date: "2024-12-03",
-      avatar: "👩",
-    },
-    {
-      id: "4",
-      name: "David Okonkwo",
-      amount: 60000,
-      items: "Rice, Chicken, Vegetables",
-      date: "2024-12-02",
-      avatar: "👨",
-    },
-    {
-      id: "5",
-      name: "Grace Adeyemi",
-      amount: 35000,
-      items: "Garri, Groundnut, Sugar",
-      date: "2024-12-01",
-      avatar: "👩‍🦱",
-    },
-    {
-      id: "6",
-      name: "Emmanuel Nwankwo",
-      amount: 90000,
-      items: "Rice, Beans, Oil, Milk",
-      date: "2024-11-30",
-      avatar: "👨‍🦲",
-    },
-  ];
+export default async function FoodBankPage() {
+  // Fetch real donors from database
+  const donorsData = await getDonors();
+
+  // Transform donor data to match the UI format
+  const recentDonors = donorsData.slice(0, 6).map((donor) => {
+    // Get the most recent donation for this donor
+    const latestDonation = donor.donations.sort((a, b) =>
+      new Date(b.date).getTime() - new Date(a.date).getTime()
+    )[0];
+
+    // Generate a random avatar emoji
+    const avatars = ["👩‍💼", "👨‍💼", "👩", "👨", "👩‍🦱", "👨‍🦲", "👩‍🦰", "👨‍🦳"];
+    const randomAvatar = avatars[Math.floor(Math.random() * avatars.length)];
+
+    return {
+      id: donor.id,
+      name: donor.name,
+      amount: latestDonation?.amount || 0,
+      items: latestDonation?.items || "No items specified",
+      date: latestDonation?.date.toISOString().split('T')[0] || new Date().toISOString().split('T')[0],
+      avatar: randomAvatar,
+    };
+  });
 
   const beneficiaries = [
     {
@@ -163,11 +136,17 @@ export default function FoodBankPage() {
     },
   ];
 
+  // Calculate stats from real data
+  const totalDonationsAmount = donorsData.reduce((total, donor) => {
+    const donorTotal = donor.donations.reduce((sum, donation) => sum + (donation.amount || 0), 0);
+    return total + donorTotal;
+  }, 0);
+
   const stats = {
-    totalDonors: 247,
-    totalBeneficiaries: 523,
-    foodDistributed: "12,450 kg",
-    activeEvents: 5,
+    totalDonors: donorsData.length,
+    totalBeneficiaries: 523, // This would come from a beneficiaries table when implemented
+    foodDistributed: "12,450 kg", // This would be calculated from donations when implemented
+    activeEvents: 5, // This would come from events table when implemented
   };
 
   const formatCurrency = (amount: number) => {
@@ -200,7 +179,7 @@ export default function FoodBankPage() {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Supporting University of Nigeria students (UNN, UNEC, Ituku-Ozalla) with essential food supplies. 
+            Supporting University of Nigeria students (UNN, UNEC, Ituku-Ozalla) with essential food supplies.
             Helping students focus on their education without worrying about their next meal.
           </p>
 
@@ -336,11 +315,10 @@ export default function FoodBankPage() {
           {distributionEvents.map((event) => (
             <div
               key={event.id}
-              className={`rounded-2xl p-8 shadow-xl border-2 ${
-                event.status === "upcoming"
-                  ? "bg-linear-to-br from-green-50 to-blue-50 border-green-200"
-                  : "bg-gray-50 border-gray-200"
-              }`}
+              className={`rounded-2xl p-8 shadow-xl border-2 ${event.status === "upcoming"
+                ? "bg-linear-to-br from-green-50 to-blue-50 border-green-200"
+                : "bg-gray-50 border-gray-200"
+                }`}
             >
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3">
@@ -348,11 +326,10 @@ export default function FoodBankPage() {
                     {event.title}
                   </h3>
                   <span
-                    className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                      event.status === "upcoming"
-                        ? "bg-green-600 text-white"
-                        : "bg-gray-400 text-white"
-                    }`}
+                    className={`px-3 py-1 rounded-full text-xs font-semibold ${event.status === "upcoming"
+                      ? "bg-green-600 text-white"
+                      : "bg-gray-400 text-white"
+                      }`}
                   >
                     {event.status === "upcoming" ? "Upcoming" : "Completed"}
                   </span>

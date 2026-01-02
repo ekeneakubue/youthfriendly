@@ -50,6 +50,12 @@ export default function Footer() {
             <li>Email: youthfriendly@unn.edu.ng</li>
             <li>Phone: +234 803 868 4409</li>
           </ul>
+          <Link
+            href="/admin/login"
+            className="inline-block mt-4 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-md transition-colors duration-200"
+          >
+            Admin Login
+          </Link>
         </div>
       </div>
       <div className="border-t border-gray-400 dark:border-white/10">

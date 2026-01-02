@@ -91,9 +91,10 @@ export async function recordDonation(formData: FormData) {
         revalidatePath("/admin/donations");
         revalidatePath("/admin/donors");
         return { success: true, donation };
-    } catch (error: any) {
-        console.error("Failed to record donation:", error.message || error);
-        throw new Error(error.message || "Failed to record donation");
+    } catch (error: unknown) {
+        const errorMessage = error instanceof Error ? error.message : "Failed to record donation";
+        console.error("Failed to record donation:", errorMessage);
+        throw new Error(errorMessage);
     }
 }
 

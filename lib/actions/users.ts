@@ -43,17 +43,18 @@ export async function createUser(formData: FormData) {
                 name,
                 email,
                 password: hashedPassword,
-                role: role as any, // ADMIN, MODERATOR, or STUDENT
+                role: role as "ADMIN" | "MODERATOR" | "STUDENT",
             }
         });
         console.log("User created successfully:", user.id);
 
         revalidatePath("/admin/users");
         return { success: true, user };
-    } catch (error: any) {
+    } catch (error: unknown) {
+        const errorMessage = error instanceof Error ? error.message : "Failed to create user";
         console.error("Failed to create user:", error);
-        console.error("Error details:", error.message, error.stack);
-        throw new Error(error.message || "Failed to create user");
+        console.error("Error details:", errorMessage);
+        throw new Error(errorMessage);
     }
 }
 

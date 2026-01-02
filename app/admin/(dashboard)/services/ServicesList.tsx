@@ -13,16 +13,25 @@ import {
     CheckCircle2
 } from "lucide-react";
 
+interface Service {
+    id: string;
+    title: string;
+    description: string;
+    status: "ACTIVE" | "DRAFT" | "HIDDEN";
+    category: "HEALTH" | "EDUCATION" | "WELFARE" | "SKILLS";
+    updatedAt: Date | string;
+}
+
 interface ServicesListProps {
-    initialServices: any[];
+    initialServices: Service[];
 }
 
 export default function ServicesList({ initialServices }: ServicesListProps) {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [services, setServices] = useState<any[]>(initialServices);
+    const [services, setServices] = useState<Service[]>(initialServices);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [loadingId, setLoadingId] = useState<string | null>(null);
-    const [editingService, setEditingService] = useState<any | null>(null);
+    const [editingService, setEditingService] = useState<Service | null>(null);
 
     const fetchServices = async () => {
         try {
@@ -33,12 +42,12 @@ export default function ServicesList({ initialServices }: ServicesListProps) {
         }
     };
 
-    const handleOpenModal = (service: any = null) => {
+    const handleOpenModal = (service: Service | null = null) => {
         setEditingService(service);
         setIsModalOpen(true);
     };
 
-    const handleEdit = (service: any) => {
+    const handleEdit = (service: Service) => {
         setLoadingId(service.id);
         // Brief artificial delay to show feedback as requested
         setTimeout(() => {
@@ -102,8 +111,8 @@ export default function ServicesList({ initialServices }: ServicesListProps) {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {services.map((service: any, i: number) => (
-                    <div key={service.id || i} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all group">
+                {services.map((service) => (
+                    <div key={service.id} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all group">
                         <div className="flex items-start justify-between mb-4">
                             <div className="p-3 bg-emerald-50 rounded-xl text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                                 <CheckCircle2 className="h-6 w-6" />

@@ -109,7 +109,7 @@ export async function deleteDonation(donationId: string) {
         revalidatePath("/admin/donations");
         revalidatePath("/admin/donors");
         return { success: true };
-    } catch (error) {
+    } catch (error: unknown) {
         console.error("Failed to delete donation:", error);
         throw new Error("Failed to delete donation");
     }

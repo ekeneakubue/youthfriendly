@@ -18,8 +18,16 @@ import {
     EyeOff
 } from "lucide-react";
 
+interface User {
+    id: string;
+    name: string;
+    email: string;
+    role: string;
+    createdAt: Date | string;
+}
+
 interface UsersListProps {
-    initialUsers: any[];
+    initialUsers: User[];
 }
 
 export default function UsersList({ initialUsers }: UsersListProps) {

@@ -21,8 +21,24 @@ import {
     Trash2
 } from "lucide-react";
 
+interface Donor {
+    id: string;
+    name: string;
+}
+
+interface Donation {
+    id: string;
+    donorId: string;
+    donor?: Donor;
+    type: "MONETARY" | "FOOD" | "OTHER";
+    amount: number | null;
+    items: string | null;
+    status: "VERIFIED" | "PROCESSING" | "FLAGGED";
+    date: Date | string;
+}
+
 interface DonationsListProps {
-    initialDonations: any[];
+    initialDonations: Donation[];
 }
 
 export default function DonationsList({ initialDonations }: DonationsListProps) {
@@ -32,7 +48,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
     const [filter, setFilter] = useState("All Donations");
     const [deletingId, setDeletingId] = useState<string | null>(null);
 
-    const filteredDonations = donations.filter((d: any) => {
+    const filteredDonations = donations.filter((d) => {
         if (filter === "All Donations") return true;
         if (filter === "Monetary") return d.type === "MONETARY";
         if (filter === "Food Bank") return d.type === "FOOD";
@@ -178,7 +194,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">
-                            {filteredDonations.map((d: any) => (
+                            {filteredDonations.map((d) => (
                                 <tr key={d.id} className="hover:bg-slate-50/50 transition-colors group">
                                     <td className="px-6 py-4">
                                         <span className="text-sm font-mono text-slate-500">{d.id.slice(-8).toUpperCase()}</span>

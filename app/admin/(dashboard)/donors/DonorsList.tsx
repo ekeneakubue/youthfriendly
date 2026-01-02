@@ -19,8 +19,24 @@ import {
     Trash2
 } from "lucide-react";
 
+interface Donation {
+    id: string;
+    amount: number | null;
+    type: string;
+    date: Date | string;
+}
+
+interface Donor {
+    id: string;
+    name: string;
+    email: string;
+    phone: string | null;
+    createdAt: Date | string;
+    donations?: Donation[];
+}
+
 interface DonorsListProps {
-    initialDonors: any[];
+    initialDonors: Donor[];
 }
 
 export default function DonorsList({ initialDonors }: DonorsListProps) {
@@ -172,7 +188,7 @@ export default function DonorsList({ initialDonors }: DonorsListProps) {
                                     <td className="px-6 py-4">
                                         <div className="space-y-1">
                                             <span className="text-sm text-slate-700 font-bold">
-                                                ₦{donor.donations?.reduce((acc: number, d: any) => acc + (d.amount || 0), 0).toLocaleString()}
+                                                ₦{donor.donations?.reduce((acc: number, d: Donation) => acc + (d.amount || 0), 0).toLocaleString()}
                                             </span>
                                             <p className="text-[10px] uppercase font-bold text-slate-400">
                                                 {donor.donations?.length || 0} Total Gifts

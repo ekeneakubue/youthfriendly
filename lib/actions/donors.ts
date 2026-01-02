@@ -14,7 +14,7 @@ export async function getDonors() {
             }
         });
         return donors;
-    } catch (error) {
+    } catch (error: unknown) {
         console.error("Failed to fetch donors:", error);
         return [];
     }
@@ -36,7 +36,7 @@ export async function createDonor(formData: FormData) {
 
         revalidatePath("/admin/donors");
         return { success: true, donor };
-    } catch (error) {
+    } catch (error: unknown) {
         console.error("Failed to create donor:", error);
         throw new Error("Failed to create donor");
     }
@@ -53,7 +53,7 @@ export async function deleteDonor(donorId: string) {
 
         revalidatePath("/admin/donors");
         return { success: true };
-    } catch (error) {
+    } catch (error: unknown) {
         console.error("Failed to delete donor:", error);
         throw new Error("Failed to delete donor");
     }

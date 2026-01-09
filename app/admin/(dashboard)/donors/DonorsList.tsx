@@ -134,7 +134,7 @@ export default function DonorsList({ initialDonors }: DonorsListProps) {
                         <input
                             type="text"
                             placeholder="Search by name or email..."
-                            className="w-full pl-10 pr-4 py-2 text-base text-slate-900 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 placeholder:text-slate-400"
+                            className="w-full pl-10 pr-4 py-2 text-base text-black font-bold border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 placeholder:text-black"
                         />
                     </div>
                     <div className="flex items-center gap-2 w-full sm:w-auto">
@@ -250,7 +250,7 @@ export default function DonorsList({ initialDonors }: DonorsListProps) {
                                             type="text"
                                             required
                                             placeholder="John Doe"
-                                            className="w-full pl-10 pr-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all font-medium placeholder:text-slate-400"
+                                            className="w-full pl-10 pr-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all font-bold placeholder:text-black"
                                         />
                                     </div>
                                 </div>
@@ -265,7 +265,7 @@ export default function DonorsList({ initialDonors }: DonorsListProps) {
                                                 type="email"
                                                 required
                                                 placeholder="john@example.com"
-                                                className="w-full pl-10 pr-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all font-medium placeholder:text-slate-400"
+                                                className="w-full pl-10 pr-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all font-bold placeholder:text-black"
                                             />
                                         </div>
                                     </div>
@@ -277,7 +277,7 @@ export default function DonorsList({ initialDonors }: DonorsListProps) {
                                                 name="phone"
                                                 type="tel"
                                                 placeholder="+234..."
-                                                className="w-full pl-10 pr-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all font-medium placeholder:text-slate-400"
+                                                className="w-full pl-10 pr-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all font-bold placeholder:text-black"
                                             />
                                         </div>
                                     </div>

@@ -73,7 +73,7 @@ export default function AdminDashboard() {
                             <h3 className="text-lg font-bold text-slate-900">Donation Trends</h3>
                             <p className="text-sm text-slate-900 font-bold">Performance over the last 30 days</p>
                         </div>
-                        <select className="text-base text-slate-900 border border-slate-300 bg-slate-50 rounded-lg px-2 py-1 focus:ring-2 focus:ring-emerald-500/20 cursor-pointer">
+                        <select className="text-base text-black font-bold border border-black bg-white rounded-lg px-2 py-1 focus:ring-2 focus:ring-green-500/20 cursor-pointer">
                             <option>Last 30 Days</option>
                             <option>Last 6 Months</option>
                             <option>This Year</option>

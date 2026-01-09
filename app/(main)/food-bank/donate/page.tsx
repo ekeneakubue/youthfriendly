@@ -64,7 +64,7 @@ export default function DonatePage() {
     }
   };
 
-  const suggestedAmounts = [5000, 10000, 25000, 50000, 100000];
+  const suggestedAmounts = [50000, 100000, 500000, 1000000, 10000000];
   const commonFoodItems = [
     "Rice",
     "Beans",
@@ -134,7 +134,7 @@ export default function DonatePage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-400 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-gray-900 placeholder:text-gray-500"
+                      className="w-full px-4 py-3 border border-gray-900 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-black font-bold placeholder:text-black"
                       placeholder="John Doe"
                     />
                   </div>
@@ -150,7 +150,7 @@ export default function DonatePage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-400 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-gray-900 placeholder:text-gray-500"
+                      className="w-full px-4 py-3 border border-gray-900 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-black font-bold placeholder:text-black"
                       placeholder="johndoe@example.com"
                     />
                   </div>
@@ -166,7 +166,7 @@ export default function DonatePage() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-400 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-gray-900 placeholder:text-gray-500"
+                      className="w-full px-4 py-3 border border-gray-900 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-black font-bold placeholder:text-black"
                       placeholder="+234 801 234 5678"
                     />
                   </div>
@@ -211,7 +211,7 @@ export default function DonatePage() {
                 {formData.donationType === "monetary" && (
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-3">
+                      <label className="block text-sm font-bold text-black mb-3">
                         Select Amount
                       </label>
                       <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-4">
@@ -222,9 +222,9 @@ export default function DonatePage() {
                             onClick={() =>
                               setFormData({ ...formData, amount: amount.toString() })
                             }
-                            className={`py-3 px-2 rounded-lg border-2 font-semibold transition-all text-sm ${formData.amount === amount.toString()
+                            className={`py-3 px-2 rounded-lg border-2 font-bold transition-all text-sm ${formData.amount === amount.toString()
                               ? "border-green-600 bg-green-50 text-green-700"
-                              : "border-gray-200 hover:border-green-300"
+                              : "border-gray-900 hover:border-green-300 text-black"
                               }`}
                           >
                             ₦{(amount / 1000).toFixed(0)}k
@@ -234,7 +234,7 @@ export default function DonatePage() {
                     </div>
 
                     <div>
-                      <label htmlFor="amount" className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label htmlFor="amount" className="block text-sm font-bold text-black mb-2">
                         Or Enter Custom Amount (₦) <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -245,7 +245,7 @@ export default function DonatePage() {
                         onChange={handleChange}
                         required
                         min="1000"
-                        className="w-full px-4 py-3 border border-gray-400 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-gray-900 placeholder:text-gray-500"
+                        className="w-full px-4 py-3 border border-gray-900 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-black font-bold placeholder:text-black"
                         placeholder="Enter amount"
                       />
                     </div>
@@ -256,7 +256,7 @@ export default function DonatePage() {
                 {formData.donationType === "food" && (
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-3">
+                      <label className="block text-sm font-bold text-black mb-3">
                         Common Food Items
                       </label>
                       <div className="flex flex-wrap gap-2 mb-4">
@@ -282,9 +282,9 @@ export default function DonatePage() {
                                 });
                               }
                             }}
-                            className={`py-2 px-4 rounded-full border-2 font-medium transition-all text-sm ${formData.foodItems.includes(item)
+                            className={`py-2 px-4 rounded-full border-2 font-bold transition-all text-sm ${formData.foodItems.includes(item)
                               ? "border-green-600 bg-green-50 text-green-700"
-                              : "border-gray-200 hover:border-green-300"
+                              : "border-gray-900 hover:border-green-300 text-black"
                               }`}
                           >
                             {item}
@@ -294,7 +294,7 @@ export default function DonatePage() {
                     </div>
 
                     <div>
-                      <label htmlFor="foodItems" className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label htmlFor="foodItems" className="block text-sm font-bold text-black mb-2">
                         Food Items to Donate <span className="text-red-500">*</span>
                       </label>
                       <textarea
@@ -304,7 +304,7 @@ export default function DonatePage() {
                         onChange={handleChange}
                         required
                         rows={3}
-                        className="w-full px-4 py-3 border border-gray-400 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-gray-900 placeholder:text-gray-500"
+                        className="w-full px-4 py-3 border border-gray-900 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-black font-bold placeholder:text-black"
                         placeholder="e.g., 5 bags of rice, 10kg of beans, 20 liters of cooking oil"
                       />
                     </div>
@@ -324,11 +324,11 @@ export default function DonatePage() {
                     onClick={() => setFormData({ ...formData, frequency: "one-time" })}
                     className={`p-4 rounded-xl border-2 transition-all ${formData.frequency === "one-time"
                       ? "border-green-600 bg-green-50"
-                      : "border-gray-200 hover:border-green-300"
+                      : "border-gray-900 hover:border-green-300"
                       }`}
                   >
-                    <div className="font-semibold text-gray-900">One-Time</div>
-                    <div className="text-sm text-gray-800">Single donation</div>
+                    <div className="font-bold text-black">One-Time</div>
+                    <div className="text-sm text-black">Single donation</div>
                   </button>
 
                   <button
@@ -336,11 +336,11 @@ export default function DonatePage() {
                     onClick={() => setFormData({ ...formData, frequency: "monthly" })}
                     className={`p-4 rounded-xl border-2 transition-all ${formData.frequency === "monthly"
                       ? "border-green-600 bg-green-50"
-                      : "border-gray-200 hover:border-green-300"
+                      : "border-gray-900 hover:border-green-300"
                       }`}
                   >
-                    <div className="font-semibold text-gray-900">Monthly</div>
-                    <div className="text-sm text-gray-800">Recurring donation</div>
+                    <div className="font-bold text-black">Monthly</div>
+                    <div className="text-sm text-black">Recurring donation</div>
                   </button>
 
                   <button
@@ -348,18 +348,18 @@ export default function DonatePage() {
                     onClick={() => setFormData({ ...formData, frequency: "quarterly" })}
                     className={`p-4 rounded-xl border-2 transition-all ${formData.frequency === "quarterly"
                       ? "border-green-600 bg-green-50"
-                      : "border-gray-200 hover:border-green-300"
+                      : "border-gray-900 hover:border-green-300"
                       }`}
                   >
-                    <div className="font-semibold text-gray-900">Quarterly</div>
-                    <div className="text-sm text-gray-800">Every 3 months</div>
+                    <div className="font-bold text-black">Quarterly</div>
+                    <div className="text-sm text-black">Every 3 months</div>
                   </button>
                 </div>
               </div>
 
               {/* Message */}
               <div className="border-t border-gray-200 pt-6">
-                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-bold text-black mb-2">
                   Specify the Category of Students You Want to Support
                 </label>
                 <textarea
@@ -368,7 +368,7 @@ export default function DonatePage() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-400 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-gray-900 placeholder:text-gray-500"
+                  className="w-full px-4 py-3 border border-gray-900 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-black font-bold placeholder:text-black"
                   placeholder="All, First Year, students from your state, Constituency, Village, Department or faculty ..."
                 />
               </div>

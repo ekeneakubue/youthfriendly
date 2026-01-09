@@ -58,7 +58,7 @@ export default function AdminLogin() {
                                 type="email"
                                 name="email"
                                 placeholder="admin@yfrc.edu.ng"
-                                className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-base text-slate-900 placeholder:text-slate-400"
+                                className="w-full px-4 py-3 border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all text-base text-black font-bold placeholder:text-black"
                             />
                         </div>
 
@@ -85,7 +85,7 @@ export default function AdminLogin() {
                                     type={showPassword ? "text" : "password"}
                                     name="password"
                                     placeholder="••••••••"
-                                    className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-base text-slate-900 placeholder:text-slate-400"
+                                    className="w-full px-4 py-3 border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all text-base text-black font-bold placeholder:text-black"
                                 />
                                 <button
                                     type="button"

@@ -172,7 +172,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                         <input
                             type="text"
                             placeholder="Filter by donor name..."
-                            className="w-full pl-10 pr-4 py-2 text-base text-slate-900 border border-slate-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 placeholder:text-slate-400"
+                            className="w-full pl-10 pr-4 py-2 text-base text-black font-bold border border-black rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 placeholder:text-black"
                         />
                     </div>
                     <button className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 border border-slate-200 rounded-lg bg-white hover:bg-slate-50 transition-colors">
@@ -277,7 +277,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                                             type="text"
                                             required
                                             placeholder="Find or enter donor name"
-                                            className="w-full pl-10 pr-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all font-medium placeholder:text-slate-400"
+                                            className="w-full pl-10 pr-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all font-bold placeholder:text-black"
                                         />
                                     </div>
                                 </div>
@@ -291,7 +291,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                                                 name="donorEmail"
                                                 type="email"
                                                 placeholder="email@example.com"
-                                                className="w-full pl-9 pr-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all placeholder:text-slate-400"
+                                                className="w-full pl-9 pr-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all font-bold placeholder:text-black"
                                             />
                                         </div>
                                     </div>
@@ -303,7 +303,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                                                 name="donorPhone"
                                                 type="tel"
                                                 placeholder="+234..."
-                                                className="w-full pl-9 pr-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all placeholder:text-slate-400"
+                                                className="w-full pl-9 pr-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all font-bold placeholder:text-black"
                                             />
                                         </div>
                                     </div>
@@ -314,7 +314,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                                         <label className="block text-sm font-bold text-slate-700 mb-1.5">Donation Type</label>
                                         <select
                                             name="type"
-                                            className="w-full px-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all bg-white font-medium"
+                                            className="w-full px-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all bg-white font-bold"
                                         >
                                             <option value="MONETARY">Monetary</option>
                                             <option value="FOOD">Food Bank</option>
@@ -329,7 +329,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                                                 name="amount"
                                                 type="number"
                                                 placeholder="0.00"
-                                                className="w-full pl-8 pr-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all font-medium placeholder:text-slate-400"
+                                                className="w-full pl-8 pr-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all font-bold placeholder:text-black"
                                             />
                                         </div>
                                     </div>
@@ -344,7 +344,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                                                 name="date"
                                                 type="date"
                                                 defaultValue={new Date().toISOString().split('T')[0]}
-                                                className="w-full pl-10 pr-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all font-medium"
+                                                className="w-full pl-10 pr-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all font-bold"
                                             />
                                         </div>
                                     </div>
@@ -352,7 +352,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                                         <label className="block text-sm font-bold text-slate-700 mb-1.5">Frequency</label>
                                         <select
                                             name="frequency"
-                                            className="w-full px-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all bg-white font-medium"
+                                            className="w-full px-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all bg-white font-bold"
                                         >
                                             <option value="ONE_TIME">One-Time</option>
                                             <option value="MONTHLY">Monthly</option>
@@ -367,7 +367,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                                         name="note"
                                         rows={2}
                                         placeholder="Add any specific details about this donation..."
-                                        className="w-full px-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all resize-none font-medium placeholder:text-slate-400"
+                                        className="w-full px-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all resize-none font-bold placeholder:text-black"
                                     />
                                 </div>
                             </div>

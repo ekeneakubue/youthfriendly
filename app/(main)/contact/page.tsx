@@ -111,7 +111,7 @@ export default function ContactPage() {
                 <input
                   id="name"
                   name="name"
-                  className="h-11 rounded-lg border border-emerald-300 bg-white px-3 text-base text-emerald-950 outline-none ring-emerald-500/50 focus:ring-2 focus:border-emerald-400 placeholder:text-emerald-900/40"
+                  className="h-11 rounded-lg border border-black bg-white px-3 text-base text-black font-bold outline-none ring-green-500/50 focus:ring-2 focus:border-green-400 placeholder:text-black"
                   placeholder="Your full name"
                 />
               </div>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                     id="email"
                     name="email"
                     type="email"
-                    className="h-11 rounded-lg border border-emerald-300 bg-white px-3 text-base text-emerald-950 outline-none ring-emerald-500/50 focus:ring-2 focus:border-emerald-400 placeholder:text-emerald-900/40"
+                    className="h-11 rounded-lg border border-black bg-white px-3 text-base text-black font-bold outline-none ring-green-500/50 focus:ring-2 focus:border-green-400 placeholder:text-black"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -136,7 +136,7 @@ export default function ContactPage() {
                   <input
                     id="phone"
                     name="phone"
-                    className="h-11 rounded-lg border border-emerald-300 bg-white px-3 text-base text-emerald-950 outline-none ring-emerald-500/50 focus:ring-2 focus:border-emerald-400 placeholder:text-emerald-900/40"
+                    className="h-11 rounded-lg border border-black bg-white px-3 text-base text-black font-bold outline-none ring-green-500/50 focus:ring-2 focus:border-green-400 placeholder:text-black"
                     placeholder="+234..."
                   />
                 </div>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                 <select
                   id="topic"
                   name="topic"
-                  className="h-11 rounded-lg border border-emerald-300 bg-white px-3 text-base text-emerald-950 outline-none ring-emerald-500/50 focus:ring-2 focus:border-emerald-400"
+                  className="h-11 rounded-lg border border-black bg-white px-3 text-base text-black font-bold outline-none ring-green-500/50 focus:ring-2 focus:border-green-400"
                   defaultValue=""
                 >
                   <option value="" disabled>
@@ -170,7 +170,7 @@ export default function ContactPage() {
                 <textarea
                   id="message"
                   name="message"
-                  className="min-h-[140px] rounded-lg border border-emerald-300 bg-white px-3 py-2 text-base text-emerald-950 outline-none ring-emerald-500/50 focus:ring-2 focus:border-emerald-400 resize-y placeholder:text-emerald-900/40"
+                  className="min-h-[140px] rounded-lg border border-black bg-white px-3 py-2 text-base text-black font-bold outline-none ring-green-500/50 focus:ring-2 focus:border-green-400 resize-y placeholder:text-black"
                   placeholder="Tell us how we can help. You can include your campus, department, and level if relevant."
                 />
               </div>

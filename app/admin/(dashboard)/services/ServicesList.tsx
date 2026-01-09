@@ -227,7 +227,7 @@ export default function ServicesList({ initialServices }: ServicesListProps) {
                                         required
                                         defaultValue={editingService?.title || ""}
                                         placeholder="e.g. Mental Health Support"
-                                        className="w-full px-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all font-medium placeholder:text-slate-400"
+                                        className="w-full px-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all font-bold placeholder:text-black"
                                     />
                                 </div>
 
@@ -237,7 +237,7 @@ export default function ServicesList({ initialServices }: ServicesListProps) {
                                         <select
                                             name="category"
                                             defaultValue={editingService?.category || "HEALTH"}
-                                            className="w-full px-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all bg-white font-medium"
+                                            className="w-full px-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all bg-white font-bold"
                                         >
                                             <option value="HEALTH">Health</option>
                                             <option value="EDUCATION">Education</option>
@@ -250,7 +250,7 @@ export default function ServicesList({ initialServices }: ServicesListProps) {
                                         <select
                                             name="status"
                                             defaultValue={editingService?.status || "ACTIVE"}
-                                            className="w-full px-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all bg-white font-medium"
+                                            className="w-full px-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all bg-white font-bold"
                                         >
                                             <option value="ACTIVE">Active</option>
                                             <option value="DRAFT">Draft</option>
@@ -267,7 +267,7 @@ export default function ServicesList({ initialServices }: ServicesListProps) {
                                         required
                                         defaultValue={editingService?.description || ""}
                                         placeholder="Briefly describe the program and its benefits..."
-                                        className="w-full px-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all resize-none font-medium placeholder:text-slate-400"
+                                        className="w-full px-4 py-2 text-base text-black border border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all resize-none font-bold placeholder:text-black"
                                     />
                                 </div>
                             </div>

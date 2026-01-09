@@ -2,6 +2,8 @@ import HeroSlider from "../../components/HeroSlider";
 import { getActiveServices } from "@/lib/actions/services";
 import { Heart, BookOpen, HandHeart, Rocket, CheckCircle2 } from "lucide-react";
 
+type ActiveService = Awaited<ReturnType<typeof getActiveServices>>[number];
+
 export default async function Home() {
   const services = await getActiveServices();
 
@@ -52,7 +54,7 @@ export default async function Home() {
           </p>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
             {services.length > 0 ? (
-              services.map((s) => (
+              services.map((s: ActiveService) => (
                 <div key={s.id} className="rounded-2xl border border-black/10 dark:border-white/10 p-8 bg-background shadow-sm hover:shadow-md transition-all group">
                   <div className="h-12 w-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                     {getIcon(s.category)}

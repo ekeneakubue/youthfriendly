@@ -135,7 +135,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                         <div>
                             <p className="text-sm font-medium text-slate-500">Total Monetary</p>
                             <h3 className="text-xl font-bold text-slate-900">
-                                ₦{donations.filter(d => d.type === 'MONETARY').reduce((acc, curr) => acc + (curr.amount || 0), 0).toLocaleString()}
+                                ₦{donations.filter((d: Donation) => d.type === 'MONETARY').reduce((acc: number, curr: Donation) => acc + (curr.amount || 0), 0).toLocaleString()}
                             </h3>
                         </div>
                     </div>
@@ -158,7 +158,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                         </div>
                         <div>
                             <p className="text-sm font-medium text-slate-500">Active Donors</p>
-                            <h3 className="text-xl font-bold text-slate-900">{new Set(donations.map(d => d.donorId)).size} Profiles</h3>
+                            <h3 className="text-xl font-bold text-slate-900">{new Set(donations.map((d: Donation) => d.donorId)).size} Profiles</h3>
                         </div>
                     </div>
                 </div>

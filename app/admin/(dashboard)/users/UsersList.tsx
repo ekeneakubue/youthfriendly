@@ -69,7 +69,7 @@ export default function UsersList({ initialUsers }: UsersListProps) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* User Cards */}
-                {users.map((user, i) => (
+                {users.map((user: User, i: number) => (
                     <div key={user.id || i} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                         <div className="flex items-start justify-between mb-4">
                             <div className="h-12 w-12 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-600 font-bold text-lg">

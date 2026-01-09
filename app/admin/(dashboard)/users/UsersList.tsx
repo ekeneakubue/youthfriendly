@@ -154,7 +154,7 @@ export default function UsersList({ initialUsers }: UsersListProps) {
                                             name="name"
                                             required
                                             placeholder="Jane Smith"
-                                            className="w-full pl-10 pr-4 py-2 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+                                            className="w-full pl-10 pr-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all placeholder:text-slate-400"
                                         />
                                     </div>
                                 </div>
@@ -168,7 +168,7 @@ export default function UsersList({ initialUsers }: UsersListProps) {
                                             name="email"
                                             required
                                             placeholder="jane@yfrc.edu.ng"
-                                            className="w-full pl-10 pr-4 py-2 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+                                            className="w-full pl-10 pr-4 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all placeholder:text-slate-400"
                                         />
                                     </div>
                                 </div>
@@ -182,7 +182,7 @@ export default function UsersList({ initialUsers }: UsersListProps) {
                                             name="password"
                                             required
                                             placeholder="••••••••"
-                                            className="w-full pl-10 pr-12 py-2 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+                                            className="w-full pl-10 pr-12 py-2 text-base text-slate-900 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all placeholder:text-slate-400"
                                         />
                                         <button
                                             type="button"

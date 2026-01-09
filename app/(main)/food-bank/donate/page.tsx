@@ -134,7 +134,7 @@ export default function DonatePage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-400 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-gray-900 placeholder:text-gray-500"
                       placeholder="John Doe"
                     />
                   </div>
@@ -245,7 +245,7 @@ export default function DonatePage() {
                         onChange={handleChange}
                         required
                         min="1000"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-400 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-gray-900 placeholder:text-gray-500"
                         placeholder="Enter amount"
                       />
                     </div>
@@ -304,7 +304,7 @@ export default function DonatePage() {
                         onChange={handleChange}
                         required
                         rows={3}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-400 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-gray-900 placeholder:text-gray-500"
                         placeholder="e.g., 5 bags of rice, 10kg of beans, 20 liters of cooking oil"
                       />
                     </div>
@@ -368,7 +368,7 @@ export default function DonatePage() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-400 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-gray-900 placeholder:text-gray-500"
                   placeholder="All, First Year, students from your state, Constituency, Village, Department or faculty ..."
                 />
               </div>

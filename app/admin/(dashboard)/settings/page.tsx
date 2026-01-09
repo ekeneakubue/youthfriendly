@@ -85,7 +85,7 @@ export default function SettingsPage() {
                                     <input
                                         type="text"
                                         defaultValue="Super Admin"
-                                        className="w-full px-3 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-base text-slate-900"
                                     />
                                 </div>
                                 <div className="space-y-1.5">
@@ -93,7 +93,7 @@ export default function SettingsPage() {
                                     <input
                                         type="email"
                                         defaultValue="super@yfrc.edu.ng"
-                                        className="w-full px-3 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-base text-slate-900"
                                     />
                                 </div>
                             </div>
@@ -103,7 +103,7 @@ export default function SettingsPage() {
                                 <textarea
                                     rows={3}
                                     placeholder="Tell us a bit about your role..."
-                                    className="w-full px-3 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                                    className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-base text-slate-900 placeholder:text-slate-400"
                                 ></textarea>
                             </div>
                         </div>

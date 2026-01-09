@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getDonors } from "@/lib/actions/donors";
 // Local type inference to avoid direct Prisma client import issues
 type DonorWithDonations = Awaited<ReturnType<typeof getDonors>>[number];
+type Donation = DonorWithDonations['donations'][number];
 
 export default async function FoodBankPage() {
   // Fetch real donors from database
@@ -10,7 +11,7 @@ export default async function FoodBankPage() {
   // Transform donor data to match the UI format
   const recentDonors = donorsData.slice(0, 6).map((donor: DonorWithDonations) => {
     // Get the most recent donation for this donor
-    const latestDonation = donor.donations.sort((a: any, b: any) =>
+    const latestDonation = donor.donations.sort((a: Donation, b: Donation) =>
       new Date(b.date).getTime() - new Date(a.date).getTime()
     )[0];
 

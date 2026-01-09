@@ -2,7 +2,9 @@
 
 import { prisma } from "@/lib/db";
 import { revalidatePath } from "next/cache";
-import { DonationType, DonationFrequency } from "@prisma/client";
+// Use local type definitions to avoid issues with @prisma/client generation on Vercel
+type DonationType = "MONETARY" | "FOOD" | "OTHER";
+type DonationFrequency = "ONE_TIME" | "MONTHLY" | "QUARTERLY";
 
 export async function getDonations() {
     try {

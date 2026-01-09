@@ -56,7 +56,7 @@ export default function UsersList({ initialUsers }: UsersListProps) {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                     <h1 className="text-2xl font-bold text-slate-900">User Management</h1>
-                    <p className="text-slate-500">Manage users and their permission levels.</p>
+                    <p className="text-slate-900 font-medium">Manage users and their permission levels.</p>
                 </div>
                 <button
                     onClick={() => setIsModalOpen(true)}
@@ -81,7 +81,7 @@ export default function UsersList({ initialUsers }: UsersListProps) {
                         </div>
                         <div className="mb-4">
                             <h3 className="text-lg font-bold text-slate-900 leading-tight">{user.name}</h3>
-                            <p className="text-sm text-slate-500">{user.email}</p>
+                            <p className="text-sm text-slate-900 font-bold">{user.email}</p>
                         </div>
                         <div className="flex items-center gap-2 mb-4">
                             <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider ${roles[user.role as keyof typeof roles].color}`}>
@@ -91,9 +91,9 @@ export default function UsersList({ initialUsers }: UsersListProps) {
                         <div className="pt-4 border-t border-slate-50 flex items-center justify-between">
                             <div className="flex items-center gap-1.5">
                                 <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                                <span className="text-xs font-medium text-slate-600">Active</span>
+                                <span className="text-xs font-bold text-slate-900">Active</span>
                             </div>
-                            <span className="text-[10px] text-slate-400 font-medium">
+                            <span className="text-[10px] text-slate-900 font-bold">
                                 {formatDate(user.createdAt)}
                             </span>
                         </div>
@@ -108,7 +108,7 @@ export default function UsersList({ initialUsers }: UsersListProps) {
                     <div className="p-3 bg-slate-50 rounded-full text-slate-400 group-hover:text-emerald-600 group-hover:bg-emerald-100 transition-colors">
                         <Plus className="h-6 w-6" />
                     </div>
-                    <p className="mt-3 text-sm font-bold text-slate-500 group-hover:text-emerald-700">Add New User</p>
+                    <p className="mt-3 text-sm font-bold text-slate-800 group-hover:text-emerald-700">Add New User</p>
                 </button>
             </div>
 
@@ -120,7 +120,7 @@ export default function UsersList({ initialUsers }: UsersListProps) {
                         <div className="flex items-center justify-between px-8 py-6 border-b border-slate-100">
                             <div>
                                 <h2 className="text-xl font-bold text-slate-900">Add New User</h2>
-                                <p className="text-sm text-slate-500">Create a new user account with role assignment.</p>
+                                <p className="text-sm text-slate-900 font-bold">Create a new user account with role assignment.</p>
                             </div>
                             <button
                                 onClick={() => setIsModalOpen(false)}

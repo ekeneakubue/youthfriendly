@@ -43,7 +43,7 @@ export default function AdminLogin() {
                         <span className="text-xl font-bold text-slate-900 tracking-tight">YFRC Admin</span>
                     </Link>
                     <h1 className="text-2xl font-bold text-slate-900">Welcome Back</h1>
-                    <p className="text-slate-500 mt-2">Enter your credentials to access the super-admin dashboard</p>
+                    <p className="text-slate-900 font-bold mt-2">Enter your credentials to access the super-admin dashboard</p>
                 </div>
 
                 <div className="bg-white border border-slate-200 rounded-3xl shadow-xl shadow-slate-200/50 p-8">
@@ -99,7 +99,7 @@ export default function AdminLogin() {
 
                         <div className="flex items-center gap-2 px-1">
                             <input type="checkbox" id="remember" className="rounded border-slate-300 text-emerald-600 focus:ring-emerald-500" />
-                            <label htmlFor="remember" className="text-xs font-medium text-slate-600 cursor-pointer">Keep me signed in for 30 days</label>
+                            <label htmlFor="remember" className="text-xs font-bold text-slate-900 cursor-pointer">Keep me signed in for 30 days</label>
                         </div>
 
                         <button
@@ -118,14 +118,14 @@ export default function AdminLogin() {
                         </button>
                     </form>
 
-                    <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-center gap-2 text-xs text-slate-400">
+                    <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-center gap-2 text-xs text-slate-900 font-bold">
                         <ShieldCheck className="h-4 w-4 text-emerald-500" />
                         <span>Secure Enterprise-grade Authentication</span>
                     </div>
                 </div>
 
-                <p className="mt-8 text-center text-sm text-slate-500">
-                    Not an administrator? <Link href="/" className="font-bold text-emerald-600 hover:text-emerald-700">Return to site</Link>
+                <p className="mt-8 text-center text-sm text-slate-900 font-bold">
+                    Not an administrator? <Link href="/" className="font-bold text-emerald-600 hover:text-emerald-700 underline">Return to site</Link>
                 </p>
             </div>
         </div>

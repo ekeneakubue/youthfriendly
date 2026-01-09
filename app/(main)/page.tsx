@@ -26,7 +26,7 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto px-6 grid gap-8 md:grid-cols-2 items-center">
           <div>
             <h2 className="text-2xl sm:text-3xl font-semibold">About Youth Friendly Resource Center, UNN</h2>
-            <p className="mt-4 text-foreground/80">
+            <p className="mt-4 text-emerald-950 font-medium leading-relaxed">
               We are dedicated to empowering students at the University of Nigeria, Nsukka with
               health education, life skills, mentoring, and career development. Our team collaborates
               with campus partners to create inclusive, youth-centered programs and safe spaces.
@@ -49,7 +49,7 @@ export default async function Home() {
       <section id="services" className="py-16 bg-black/5 dark:bg-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-semibold">Our Services</h2>
-          <p className="mt-2 text-foreground/70 max-w-2xl">
+          <p className="mt-2 text-emerald-900 font-bold max-w-2xl">
             Practical programs and resources tailored for youth.
           </p>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
@@ -63,7 +63,7 @@ export default async function Home() {
                     {s.category}
                   </span>
                   <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-                  <p className="text-sm text-foreground/70 leading-relaxed line-clamp-4">{s.description}</p>
+                  <p className="text-sm text-gray-900 font-medium leading-relaxed line-clamp-4">{s.description}</p>
                 </div>
               ))
             ) : (
@@ -95,7 +95,7 @@ export default async function Home() {
               <article key={e.title} className="rounded-lg border border-black/10 dark:border-white/10 p-6 bg-background">
                 <div className="text-xs uppercase tracking-wide text-emerald-700 dark:text-emerald-400">{e.date}</div>
                 <h3 className="mt-1 font-semibold">{e.title}</h3>
-                <p className="mt-2 text-sm text-foreground/70">{e.desc}</p>
+                <p className="mt-2 text-sm text-gray-950 font-medium">{e.desc}</p>
                 <a href="#contact" className="mt-4 inline-block text-sm text-emerald-600 hover:underline">Register interest →</a>
               </article>
             ))}
@@ -121,7 +121,7 @@ export default async function Home() {
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] items-start">
             <div>
               <h2 className="text-2xl sm:text-3xl font-semibold">Get in touch with Youth Friendly RC, UNN</h2>
-              <p className="mt-3 text-foreground/80 max-w-2xl">
+              <p className="mt-3 text-emerald-950 font-medium max-w-2xl">
                 Are you a student looking for support, a partner organization, or a potential donor?
                 Reach out and we&apos;ll connect you with the right person or program.
               </p>
@@ -132,7 +132,7 @@ export default async function Home() {
                     For students
                   </p>
                   <h3 className="mt-2 font-semibold">Health, food bank &amp; counselling</h3>
-                  <p className="mt-2 text-sm text-foreground/70">
+                  <p className="mt-2 text-sm text-emerald-950 font-medium">
                     Get confidential, youth-friendly support for your wellbeing, academics and basic needs.
                   </p>
                 </div>
@@ -141,7 +141,7 @@ export default async function Home() {
                     For partners
                   </p>
                   <h3 className="mt-2 font-semibold">Donors, NGOs &amp; campus units</h3>
-                  <p className="mt-2 text-sm text-foreground/70">
+                  <p className="mt-2 text-sm text-emerald-950 font-medium">
                     Collaborate with us on programmes, sponsorships, and volunteer opportunities for UNN students.
                   </p>
                 </div>
@@ -154,7 +154,7 @@ export default async function Home() {
                 >
                   Open full contact page
                 </a>
-                <p className="text-xs text-foreground/60">
+                <p className="text-xs text-emerald-950 font-bold">
                   Prefer email?{" "}
                   <a href="mailto:youthfriendly@unn.edu.ng" className="text-emerald-700 hover:text-emerald-800 underline-offset-2 hover:underline">
                     youthfriendly@unn.edu.ng
@@ -166,19 +166,19 @@ export default async function Home() {
             <div className="grid gap-4 content-start">
               <div className="rounded-lg border border-black/10 dark:border-white/10 p-6 bg-background">
                 <h3 className="font-semibold">Visit us on campus</h3>
-                <p className="mt-2 text-sm text-foreground/70">
+                <p className="mt-2 text-sm text-emerald-950 font-medium">
                   Youth Friendly Resource Center, University of Nigeria, Nsukka (UNN) Campus.
                   Walk in during office hours for one-on-one support and referrals.
                 </p>
-                <p className="mt-3 text-xs text-foreground/60">
+                <p className="mt-3 text-xs text-emerald-950 font-bold">
                   Monday – Friday: 9:00am – 4:00pm (excluding public holidays)
                 </p>
               </div>
               <div className="rounded-lg border border-black/10 dark:border-white/10 p-6 bg-background">
                 <h3 className="font-semibold">Contact details</h3>
-                <p className="mt-2 text-sm text-foreground/70">Email: youthfriendly@unn.edu.ng</p>
-                <p className="text-sm text-foreground/70">Phone / WhatsApp: +234 803 868 4409</p>
-                <p className="mt-3 text-xs text-foreground/60">
+                <p className="mt-2 text-sm text-emerald-950 font-medium">Email: youthfriendly@unn.edu.ng</p>
+                <p className="text-sm text-emerald-950 font-medium">Phone / WhatsApp: +234 803 868 4409</p>
+                <p className="mt-3 text-xs text-emerald-950 font-bold">
                   For emergencies or immediate danger, contact campus security or local emergency services first.
                 </p>
               </div>

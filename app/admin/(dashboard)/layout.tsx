@@ -54,7 +54,7 @@ export default function AdminLayout({
                                     href={item.href}
                                     className={`flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors ${isActive
                                         ? "bg-emerald-50 text-emerald-700"
-                                        : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                                        : "text-slate-900 font-bold hover:bg-slate-50 hover:text-emerald-700"
                                         }`}
                                 >
                                     <item.icon className={`h-5 w-5 ${isActive ? "text-emerald-600" : "text-slate-400"}`} />
@@ -70,9 +70,9 @@ export default function AdminLayout({
                                 await logout();
                                 window.location.href = "/admin/login";
                             }}
-                            className="flex w-full items-center gap-3 px-3 py-2 text-sm font-medium text-slate-600 rounded-lg hover:bg-red-50 hover:text-red-700 transition-colors"
+                            className="flex w-full items-center gap-3 px-3 py-2 text-sm font-bold text-slate-900 rounded-lg hover:bg-red-50 hover:text-red-700 transition-colors"
                         >
-                            <LogOut className="h-5 w-5 text-slate-400" />
+                            <LogOut className="h-5 w-5 text-slate-900" />
                             Sign Out
                         </button>
                     </div>
@@ -103,7 +103,7 @@ export default function AdminLayout({
                         <div className="flex items-center gap-3">
                             <div className="text-right hidden sm:block">
                                 <p className="text-sm font-semibold text-slate-900 leading-tight">Super Admin</p>
-                                <p className="text-xs text-slate-500">Super Admin</p>
+                                <p className="text-xs text-slate-900 font-bold">Super Admin</p>
                             </div>
                             <div className="h-9 w-9 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-700 font-bold">
                                 SA

@@ -93,7 +93,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                     <h1 className="text-2xl font-bold text-slate-900">Donations Ledger</h1>
-                    <p className="text-slate-500">Track and manage all contributions to the Resource Center.</p>
+                    <p className="text-slate-900 font-medium">Track and manage all contributions to the Resource Center.</p>
                 </div>
                 <div className="flex items-center gap-3">
                     <button className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
@@ -117,7 +117,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                         onClick={() => setFilter(tab)}
                         className={`px-6 py-3 text-sm font-medium transition-all ${filter === tab
                             ? "text-emerald-600 border-b-2 border-emerald-600"
-                            : "text-slate-500 hover:text-slate-700 hover:bg-slate-50"
+                            : "text-slate-900 font-bold hover:text-emerald-700 hover:bg-slate-50"
                             }`}
                     >
                         {tab}
@@ -133,7 +133,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                             <Wallet className="h-6 w-6" />
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-slate-500">Total Monetary</p>
+                            <p className="text-sm font-bold text-slate-800">Total Monetary</p>
                             <h3 className="text-xl font-bold text-slate-900">
                                 ₦{donations.filter((d: Donation) => d.type === 'MONETARY').reduce((acc: number, curr: Donation) => acc + (curr.amount || 0), 0).toLocaleString()}
                             </h3>
@@ -146,7 +146,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                             <Package className="h-6 w-6" />
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-slate-500">Donation Counts</p>
+                            <p className="text-sm font-bold text-slate-800">Donation Counts</p>
                             <h3 className="text-xl font-bold text-slate-900">{donations.length} Contributions</h3>
                         </div>
                     </div>
@@ -157,7 +157,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                             <TrendingUp className="h-6 w-6" />
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-slate-500">Active Donors</p>
+                            <p className="text-sm font-bold text-slate-800">Active Donors</p>
                             <h3 className="text-xl font-bold text-slate-900">{new Set(donations.map((d: Donation) => d.donorId)).size} Profiles</h3>
                         </div>
                     </div>
@@ -185,19 +185,19 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                     <table className="w-full text-left border-collapse">
                         <thead>
                             <tr className="bg-slate-50/50">
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Transaction ID</th>
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Donor</th>
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Value</th>
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Status</th>
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Date</th>
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-right">Actions</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider">Transaction ID</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider">Donor</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider">Value</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider">Status</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider">Date</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider text-right">Actions</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">
                             {filteredDonations.map((d) => (
                                 <tr key={d.id} className="hover:bg-slate-50/50 transition-colors group">
                                     <td className="px-6 py-4">
-                                        <span className="text-sm font-mono text-slate-500">{d.id.slice(-8).toUpperCase()}</span>
+                                        <span className="text-sm font-mono text-slate-900 font-bold">{d.id.slice(-8).toUpperCase()}</span>
                                     </td>
                                     <td className="px-6 py-4">
                                         <p className="text-sm font-semibold text-slate-900">{d.donor?.name || "Unknown"}</p>
@@ -217,7 +217,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                                             {d.status}
                                         </span>
                                     </td>
-                                    <td className="px-6 py-4 text-sm text-slate-500">
+                                    <td className="px-6 py-4 text-sm text-slate-900 font-bold">
                                         {new Date(d.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
                                     </td>
                                     <td className="px-6 py-4 text-right">
@@ -256,7 +256,7 @@ export default function DonationsList({ initialDonations }: DonationsListProps) 
                         <div className="flex items-center justify-between px-8 py-6 border-b border-slate-100">
                             <div>
                                 <h2 className="text-xl font-bold text-slate-900">Record Offline Donation</h2>
-                                <p className="text-sm text-slate-500">Manually log a physical or manual transaction.</p>
+                                <p className="text-sm text-slate-900 font-bold">Manually log a physical or manual transaction.</p>
                             </div>
                             <button
                                 onClick={() => setIsModalOpen(false)}

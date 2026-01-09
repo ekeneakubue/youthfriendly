@@ -87,7 +87,7 @@ export default function DonatePage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
             Make a Donation
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-800 max-w-2xl mx-auto">
             Your generosity helps university students focus on their education.
             Every contribution makes a difference.
           </p>
@@ -103,7 +103,7 @@ export default function DonatePage() {
               <h2 className="text-3xl font-bold text-green-600 mb-4">
                 Thank You for Your Donation!
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-800 mb-6">
                 Your contribution will help support university students in need.
                 We&apos;ll be in touch with you shortly.
               </p>
@@ -124,7 +124,7 @@ export default function DonatePage() {
 
                 <div className="space-y-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="name" className="block text-sm font-bold text-gray-900 mb-2">
                       Full Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -140,7 +140,7 @@ export default function DonatePage() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-sm font-bold text-gray-900 mb-2">
                       Email Address <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -150,13 +150,13 @@ export default function DonatePage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-400 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-gray-900 placeholder:text-gray-500"
                       placeholder="johndoe@example.com"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="phone" className="block text-sm font-bold text-gray-900 mb-2">
                       Phone Number <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -166,7 +166,7 @@ export default function DonatePage() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-400 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-base text-gray-900 placeholder:text-gray-500"
                       placeholder="+234 801 234 5678"
                     />
                   </div>
@@ -190,7 +190,7 @@ export default function DonatePage() {
                   >
                     <div className="text-4xl mb-2">💵</div>
                     <div className="font-semibold text-gray-900">Monetary</div>
-                    <div className="text-sm text-gray-600">Cash donation</div>
+                    <div className="text-sm text-gray-800">Cash donation</div>
                   </button>
 
                   <button
@@ -203,7 +203,7 @@ export default function DonatePage() {
                   >
                     <div className="text-4xl mb-2">🍚</div>
                     <div className="font-semibold text-gray-900">Food Items</div>
-                    <div className="text-sm text-gray-600">Physical donation</div>
+                    <div className="text-sm text-gray-800">Physical donation</div>
                   </button>
                 </div>
 
@@ -328,7 +328,7 @@ export default function DonatePage() {
                       }`}
                   >
                     <div className="font-semibold text-gray-900">One-Time</div>
-                    <div className="text-sm text-gray-600">Single donation</div>
+                    <div className="text-sm text-gray-800">Single donation</div>
                   </button>
 
                   <button
@@ -340,7 +340,7 @@ export default function DonatePage() {
                       }`}
                   >
                     <div className="font-semibold text-gray-900">Monthly</div>
-                    <div className="text-sm text-gray-600">Recurring donation</div>
+                    <div className="text-sm text-gray-800">Recurring donation</div>
                   </button>
 
                   <button
@@ -352,7 +352,7 @@ export default function DonatePage() {
                       }`}
                   >
                     <div className="font-semibold text-gray-900">Quarterly</div>
-                    <div className="text-sm text-gray-600">Every 3 months</div>
+                    <div className="text-sm text-gray-800">Every 3 months</div>
                   </button>
                 </div>
               </div>
@@ -412,7 +412,7 @@ export default function DonatePage() {
                   )}
                 </button>
 
-                <p className="text-sm text-gray-500 text-center mt-4">
+                <p className="text-sm text-gray-700 text-center mt-4">
                   By submitting this form, you agree to be contacted regarding your donation.
                 </p>
               </div>
@@ -425,21 +425,21 @@ export default function DonatePage() {
           <div className="bg-white rounded-xl p-6 shadow-md text-center">
             <div className="text-4xl mb-3">🔒</div>
             <h3 className="font-bold text-gray-900 mb-2">Secure</h3>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-800">
               Your information is protected and secure
             </p>
           </div>
           <div className="bg-white rounded-xl p-6 shadow-md text-center">
             <div className="text-4xl mb-3">✅</div>
             <h3 className="font-bold text-gray-900 mb-2">Transparent</h3>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-800">
               Track where your donation goes
             </p>
           </div>
           <div className="bg-white rounded-xl p-6 shadow-md text-center">
             <div className="text-4xl mb-3">📧</div>
             <h3 className="font-bold text-gray-900 mb-2">Updates</h3>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-800">
               Receive impact reports via email
             </p>
           </div>

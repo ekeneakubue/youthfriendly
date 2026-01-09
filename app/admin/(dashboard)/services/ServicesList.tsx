@@ -99,7 +99,7 @@ export default function ServicesList({ initialServices }: ServicesListProps) {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                     <h1 className="text-2xl font-bold text-slate-900">Program Services</h1>
-                    <p className="text-slate-500">Manage the core programs and offerings visible on the home page.</p>
+                    <p className="text-slate-900 font-medium">Manage the core programs and offerings visible on the home page.</p>
                 </div>
                 <button
                     onClick={() => handleOpenModal()}
@@ -148,7 +148,7 @@ export default function ServicesList({ initialServices }: ServicesListProps) {
                                 {service.category}
                             </span>
                             <h3 className="text-lg font-bold text-slate-900 mb-2">{service.title}</h3>
-                            <p className="text-sm text-slate-500 line-clamp-3 leading-relaxed">
+                            <p className="text-sm text-slate-900 font-bold line-clamp-3 leading-relaxed">
                                 {service.description}
                             </p>
                         </div>
@@ -156,9 +156,9 @@ export default function ServicesList({ initialServices }: ServicesListProps) {
                         <div className="pt-4 border-t border-slate-50 flex items-center justify-between">
                             <div className="flex items-center gap-1.5">
                                 <div className={`h-1.5 w-1.5 rounded-full ${service.status === "ACTIVE" ? "bg-emerald-500" : "bg-amber-500"}`} />
-                                <span className="text-xs font-medium text-slate-600 uppercase">{service.status}</span>
+                                <span className="text-xs font-bold text-slate-900 uppercase">{service.status}</span>
                             </div>
-                            <span className="text-[10px] text-slate-400 font-medium italic">
+                            <span className="text-[10px] text-slate-900 font-bold italic">
                                 {new Date(service.updatedAt).toLocaleDateString()}
                             </span>
                         </div>
@@ -172,7 +172,7 @@ export default function ServicesList({ initialServices }: ServicesListProps) {
                     <div className="p-3 bg-slate-50 rounded-full text-slate-400 group-hover:text-emerald-600 group-hover:bg-emerald-100 transition-colors">
                         <Plus className="h-6 w-6" />
                     </div>
-                    <p className="mt-3 text-sm font-bold text-slate-500 group-hover:text-emerald-700">Add New Program</p>
+                    <p className="mt-3 text-sm font-bold text-slate-800 group-hover:text-emerald-700">Add New Program</p>
                 </button>
             </div>
 

@@ -32,7 +32,7 @@ export default function AdminDashboard() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                     <h1 className="text-2xl font-bold text-slate-900">Dashboard Overview</h1>
-                    <p className="text-slate-500">Welcome back, Super Admin. Here&apos;s what&apos;s happening today.</p>
+                    <p className="text-slate-900 font-medium">Welcome back, Super Admin. Here&apos;s what&apos;s happening today.</p>
                 </div>
                 <div className="flex items-center gap-3">
                     <button className="px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
@@ -58,7 +58,7 @@ export default function AdminDashboard() {
                             </div>
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-slate-500">{stat.label}</p>
+                            <p className="text-sm font-bold text-slate-800">{stat.label}</p>
                             <h3 className="text-2xl font-bold text-slate-900">{stat.value}</h3>
                         </div>
                     </div>
@@ -71,7 +71,7 @@ export default function AdminDashboard() {
                     <div className="flex items-center justify-between mb-8">
                         <div>
                             <h3 className="text-lg font-bold text-slate-900">Donation Trends</h3>
-                            <p className="text-sm text-slate-500">Performance over the last 30 days</p>
+                            <p className="text-sm text-slate-900 font-bold">Performance over the last 30 days</p>
                         </div>
                         <select className="text-base text-slate-900 border border-slate-300 bg-slate-50 rounded-lg px-2 py-1 focus:ring-2 focus:ring-emerald-500/20 cursor-pointer">
                             <option>Last 30 Days</option>
@@ -95,7 +95,7 @@ export default function AdminDashboard() {
                                             ₦{(height * 10000).toLocaleString()}
                                         </div>
                                     </div>
-                                    <div className="text-[10px] text-slate-400 mt-2 text-center">
+                                    <div className="text-[10px] text-slate-900 font-bold mt-2 text-center">
                                         {['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'][i]}
                                     </div>
                                 </div>
@@ -153,12 +153,12 @@ export default function AdminDashboard() {
                     <table className="w-full text-left border-collapse">
                         <thead>
                             <tr className="bg-slate-50/50">
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Donor</th>
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Type</th>
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Value</th>
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Date</th>
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Status</th>
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-right">Action</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider">Donor</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider">Type</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider">Value</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider">Date</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider">Status</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider text-right">Action</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">
@@ -171,7 +171,7 @@ export default function AdminDashboard() {
                                             </div>
                                             <div>
                                                 <p className="text-sm font-semibold text-slate-900 leading-none">{donation.name}</p>
-                                                <p className="text-xs text-slate-500 mt-1">{donation.email}</p>
+                                                <p className="text-xs text-slate-900 font-bold mt-1">{donation.email}</p>
                                             </div>
                                         </div>
                                     </td>
@@ -182,12 +182,12 @@ export default function AdminDashboard() {
                                         </span>
                                     </td>
                                     <td className="px-6 py-4 text-sm font-medium text-slate-700">{donation.amount}</td>
-                                    <td className="px-6 py-4 text-sm text-slate-500">{donation.date}</td>
+                                    <td className="px-6 py-4 text-sm text-slate-900 font-bold">{donation.date}</td>
                                     <td className="px-6 py-4">
                                         <div className="flex items-center gap-1.5">
                                             <div className={`h-1.5 w-1.5 rounded-full ${donation.status === "Completed" ? "bg-emerald-500" : "bg-amber-500"
                                                 }`} />
-                                            <span className="text-sm text-slate-600">{donation.status}</span>
+                                            <span className="text-sm text-slate-900 font-bold">{donation.status}</span>
                                         </div>
                                     </td>
                                     <td className="px-6 py-4 text-right">

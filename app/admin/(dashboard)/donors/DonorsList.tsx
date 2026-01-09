@@ -89,7 +89,7 @@ export default function DonorsList({ initialDonors }: DonorsListProps) {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                     <h1 className="text-2xl font-bold text-slate-900">Donor Community</h1>
-                    <p className="text-slate-500">View and manage relationship with your supporters.</p>
+                    <p className="text-slate-900 font-medium">View and manage relationship with your supporters.</p>
                 </div>
                 <button
                     onClick={() => setIsModalOpen(true)}
@@ -103,14 +103,14 @@ export default function DonorsList({ initialDonors }: DonorsListProps) {
             {/* Stats row for Donors */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-sm">
-                    <p className="text-sm font-medium text-slate-500 mb-1">Total Profiles</p>
+                    <p className="text-sm font-bold text-slate-800 mb-1">Total Profiles</p>
                     <div className="flex items-center gap-2">
                         <h3 className="text-2xl font-bold text-slate-900">{donors.length}</h3>
                         <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">+100%</span>
                     </div>
                 </div>
                 <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-sm">
-                    <p className="text-sm font-medium text-slate-500 mb-1">Total Contributions</p>
+                    <p className="text-sm font-bold text-slate-800 mb-1">Total Contributions</p>
                     <div className="flex items-center gap-2">
                         <h3 className="text-2xl font-bold text-slate-900">
                             {donors.reduce((acc, d) => acc + (d.donations?.length || 0), 0)}
@@ -119,7 +119,7 @@ export default function DonorsList({ initialDonors }: DonorsListProps) {
                     </div>
                 </div>
                 <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-sm">
-                    <p className="text-sm font-medium text-slate-500 mb-1">Retention Rate</p>
+                    <p className="text-sm font-bold text-slate-800 mb-1">Retention Rate</p>
                     <div className="flex items-center gap-2">
                         <h3 className="text-2xl font-bold text-slate-900">N/A</h3>
                         <span className="text-xs font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">New CRM</span>
@@ -149,11 +149,11 @@ export default function DonorsList({ initialDonors }: DonorsListProps) {
                     <table className="w-full text-left border-collapse">
                         <thead>
                             <tr className="bg-slate-50/50">
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Donor Profile</th>
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Contact Info</th>
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Historical</th>
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Joined</th>
-                                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-right">Actions</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider">Donor Profile</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider">Contact Info</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider">Historical</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider">Joined</th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-900 uppercase tracking-wider text-right">Actions</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100 font-medium">
@@ -168,19 +168,19 @@ export default function DonorsList({ initialDonors }: DonorsListProps) {
                                                 <p className="text-sm font-bold text-slate-900">{donor.name}</p>
                                                 <div className="flex items-center gap-1 mt-0.5">
                                                     <Heart className="h-3 w-3 text-rose-500 fill-rose-500" />
-                                                    <span className="text-[10px] text-slate-500 uppercase tracking-wide">Community Member</span>
+                                                    <span className="text-[10px] text-slate-900 font-bold uppercase tracking-wide">Community Member</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </td>
                                     <td className="px-6 py-4">
                                         <div className="space-y-1">
-                                            <div className="flex items-center gap-2 text-xs text-slate-600">
-                                                <Mail className="h-3 w-3 text-slate-400" />
+                                            <div className="flex items-center gap-2 text-xs text-slate-900 font-bold">
+                                                <Mail className="h-3 w-3 text-slate-900" />
                                                 {donor.email}
                                             </div>
-                                            <div className="flex items-center gap-2 text-xs text-slate-600">
-                                                <Phone className="h-3 w-3 text-slate-400" />
+                                            <div className="flex items-center gap-2 text-xs text-slate-900 font-bold">
+                                                <Phone className="h-3 w-3 text-slate-900" />
                                                 {donor.phone || "No phone recorded"}
                                             </div>
                                         </div>
@@ -190,12 +190,12 @@ export default function DonorsList({ initialDonors }: DonorsListProps) {
                                             <span className="text-sm text-slate-700 font-bold">
                                                 ₦{donor.donations?.reduce((acc: number, d: Donation) => acc + (d.amount || 0), 0).toLocaleString()}
                                             </span>
-                                            <p className="text-[10px] uppercase font-bold text-slate-400">
+                                            <p className="text-[10px] uppercase font-bold text-slate-900">
                                                 {donor.donations?.length || 0} Total Gifts
                                             </p>
                                         </div>
                                     </td>
-                                    <td className="px-6 py-4 text-sm text-slate-500">
+                                    <td className="px-6 py-4 text-sm text-slate-900 font-bold">
                                         {formatDate(donor.createdAt)}
                                     </td>
                                     <td className="px-6 py-4 text-right">
@@ -229,7 +229,7 @@ export default function DonorsList({ initialDonors }: DonorsListProps) {
                         <div className="flex items-center justify-between px-8 py-6 border-b border-slate-100">
                             <div>
                                 <h2 className="text-xl font-bold text-slate-900">Add New Donor</h2>
-                                <p className="text-sm text-slate-500">Create a new donor profile in the system.</p>
+                                <p className="text-sm text-slate-900 font-bold">Create a new donor profile in the system.</p>
                             </div>
                             <button
                                 onClick={() => setIsModalOpen(false)}

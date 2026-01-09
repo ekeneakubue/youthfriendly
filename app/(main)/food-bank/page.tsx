@@ -213,7 +213,7 @@ export default async function FoodBankPage() {
               Student Food Bank
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-800 mb-8 max-w-3xl mx-auto font-medium">
             Supporting University of Nigeria students (UNN, UNEC, Ituku-Ozalla) with essential food supplies.
             Helping students focus on their education without worrying about their next meal.
           </p>
@@ -224,25 +224,25 @@ export default async function FoodBankPage() {
               <div className="text-2xl md:text-2xl font-bold text-green-600 mb-2">
                 {stats.totalDonors}
               </div>
-              <div className="text-gray-600 text-sm md:text-base">Total Donors</div>
+              <div className="text-gray-900 text-sm md:text-base font-bold">Total Donors</div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-md">
               <div className="text-2xl md:text-2xl font-bold text-blue-600 mb-2">
                 {stats.totalBeneficiaries}
               </div>
-              <div className="text-gray-600 text-sm md:text-base">Students Helped</div>
+              <div className="text-gray-900 text-sm md:text-base font-bold">Students Helped</div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-md">
               <div className="text-2xl md:text-2xl font-bold text-orange-600 mb-2">
                 {stats.foodDistributed}
               </div>
-              <div className="text-gray-600 text-sm md:text-base">Food Distributed</div>
+              <div className="text-gray-900 text-sm md:text-base font-bold">Food Distributed</div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-md">
               <div className="text-2xl md:text-2xl font-bold text-purple-600 mb-2">
                 {stats.activeEvents}
               </div>
-              <div className="text-gray-600 text-sm md:text-base">Active Events</div>
+              <div className="text-gray-900 text-sm md:text-base font-bold">Active Events</div>
             </div>
           </div>
         </div>
@@ -254,7 +254,7 @@ export default async function FoodBankPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Recent Donors
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-900 font-medium">
             Thank you to our generous donors who make a difference
           </p>
         </div>
@@ -275,8 +275,8 @@ export default async function FoodBankPage() {
                   <p className="text-2xl font-bold text-green-600 mb-2">
                     {formatCurrency(donor.amount)}
                   </p>
-                  <p className="text-sm text-gray-600 mb-2">{donor.items}</p>
-                  <p className="text-xs text-gray-500">{formatDate(donor.date)}</p>
+                  <p className="text-sm text-gray-900 font-medium mb-2">{donor.items}</p>
+                  <p className="text-xs text-gray-700 font-bold">{formatDate(donor.date)}</p>
                 </div>
               </div>
             </div>
@@ -298,7 +298,7 @@ export default async function FoodBankPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Student Beneficiaries
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-900 font-medium">
             University students we&apos;ve supported through our food bank program
           </p>
         </div>
@@ -316,19 +316,19 @@ export default async function FoodBankPage() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">
                     {beneficiary.name}
                   </h3>
-                  <p className="text-sm text-gray-600 mb-1">
+                  <p className="text-sm text-gray-900 mb-1 font-medium">
                     🎓 {beneficiary.year}
                   </p>
-                  <p className="text-sm text-gray-600 mb-1">
+                  <p className="text-sm text-gray-900 mb-1 font-medium">
                     📚 {beneficiary.course}
                   </p>
-                  <p className="text-sm text-gray-600 mb-2">
+                  <p className="text-sm text-gray-900 mb-2 font-medium">
                     🏫 {beneficiary.university}
                   </p>
                   <p className="text-sm text-blue-600 font-medium mb-1">
                     {beneficiary.itemsReceived}
                   </p>
-                  <p className="text-xs text-gray-500">{formatDate(beneficiary.date)}</p>
+                  <p className="text-xs text-gray-700 font-bold">{formatDate(beneficiary.date)}</p>
                 </div>
               </div>
             </div>
@@ -342,7 +342,7 @@ export default async function FoodBankPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Food Distribution Events
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-900 font-medium">
             Join us in our upcoming events or see the impact we&apos;ve made
           </p>
         </div>
@@ -369,25 +369,25 @@ export default async function FoodBankPage() {
                     {event.status === "upcoming" ? "Upcoming" : "Completed"}
                   </span>
                 </div>
-                <p className="text-gray-600 mb-4">{event.description}</p>
+                <p className="text-gray-950 mb-4 font-bold">{event.description}</p>
                 <div className="space-y-2 text-sm">
                   <div className="flex items-center gap-2">
                     <span className="text-lg">📍</span>
-                    <span className="text-gray-700 font-medium">{event.location}</span>
+                    <span className="text-gray-950 font-bold">{event.location}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-lg">📅</span>
-                    <span className="text-gray-700 font-medium">
+                    <span className="text-gray-950 font-bold">
                       {formatDate(event.date)}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-lg">⏰</span>
-                    <span className="text-gray-700 font-medium">{event.time}</span>
+                    <span className="text-gray-950 font-bold">{event.time}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-lg">👥</span>
-                    <span className="text-gray-700 font-medium">
+                    <span className="text-gray-950 font-bold">
                       {event.beneficiaries} beneficiaries
                     </span>
                   </div>

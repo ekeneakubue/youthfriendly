@@ -11,49 +11,49 @@ export default function ContactPage() {
             <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-emerald-950">
               Let&apos;s support UNN students together
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-emerald-900/80 max-w-xl">
+            <p className="mt-4 text-base sm:text-lg text-emerald-950 max-w-xl">
               Whether you are a student seeking support, a partner organization, or a potential
               donor, we&apos;d love to hear from you. Share your questions, ideas, or feedback and
               our team will get back to you.
             </p>
-            <dl className="mt-8 grid gap-4 text-sm text-emerald-950/80">
+            <dl className="mt-8 grid gap-4 text-sm text-emerald-950">
               <div>
-                <dt className="font-medium text-emerald-900">Email</dt>
+                <dt className="font-bold text-emerald-900">Email</dt>
                 <dd className="mt-1">
                   <a
                     href="mailto:youthfriendly@unn.edu.ng"
-                    className="text-emerald-700 hover:text-emerald-800 underline-offset-2 hover:underline"
+                    className="text-emerald-700 hover:text-emerald-800 underline-offset-2 hover:underline font-medium"
                   >
                     youthfriendly@unn.edu.ng
                   </a>
                 </dd>
               </div>
               <div>
-                <dt className="font-medium text-emerald-900">Phone / WhatsApp</dt>
-                <dd className="mt-1">+234 803 868 4409</dd>
+                <dt className="font-bold text-emerald-900">Phone / WhatsApp</dt>
+                <dd className="mt-1 font-medium">+234 803 868 4409</dd>
               </div>
               <div>
-                <dt className="font-medium text-emerald-900">Location</dt>
-                <dd className="mt-1">
+                <dt className="font-bold text-emerald-900">Location</dt>
+                <dd className="mt-1 font-medium">
                   Youth Friendly Resource Center, University of Nigeria, Nsukka (UNN) Campus
                 </dd>
               </div>
               <div className="grid grid-cols-2 gap-4 pt-2 text-xs sm:text-sm">
                 <div>
-                  <dt className="font-semibold uppercase tracking-wide text-emerald-700/90">
+                  <dt className="font-bold uppercase tracking-wide text-emerald-800">
                     Office hours
                   </dt>
-                  <dd className="mt-1 text-emerald-950/80">
+                  <dd className="mt-1 text-emerald-950 font-medium">
                     Mon – Fri: 9:00am – 4:00pm
                     <br />
                     Excluding public holidays
                   </dd>
                 </div>
                 <div>
-                  <dt className="font-semibold uppercase tracking-wide text-emerald-700/90">
+                  <dt className="font-bold uppercase tracking-wide text-emerald-800">
                     Campus coverage
                   </dt>
-                  <dd className="mt-1 text-emerald-950/80">
+                  <dd className="mt-1 text-emerald-950 font-medium">
                     UNN Nsukka, UNEC Enugu &amp;
                     <br />
                     Ituku-Ozalla Campus
@@ -68,21 +68,21 @@ export default function ContactPage() {
             <h2 className="text-lg font-semibold text-emerald-950">
               Not sure what you need?
             </h2>
-            <p className="mt-2 text-sm text-emerald-950/80">
+            <p className="mt-2 text-sm text-emerald-950 font-medium">
               Share a brief description of your situation and we&apos;ll connect you with the right
               person or program at Youth Friendly Resource Center.
             </p>
-            <ul className="mt-4 space-y-2 text-sm text-emerald-950/80">
+            <ul className="mt-4 space-y-2 text-sm text-emerald-950 font-medium">
               <li className="flex gap-2">
-                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-600" />
                 <span>Confidential support for health and wellbeing.</span>
               </li>
               <li className="flex gap-2">
-                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-600" />
                 <span>Food bank, scholarships, and emergency support referrals.</span>
               </li>
               <li className="flex gap-2">
-                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-600" />
                 <span>Partnerships, volunteering, and campus collaborations.</span>
               </li>
             </ul>
@@ -98,14 +98,14 @@ export default function ContactPage() {
             <h2 className="text-xl sm:text-2xl font-semibold text-emerald-950">
               Send us a message
             </h2>
-            <p className="mt-2 text-sm text-emerald-950/80">
+            <p className="mt-2 text-sm text-emerald-950 font-medium">
               Fill in the form and we&apos;ll respond within 2–3 working days. For urgent matters,
               please call during office hours.
             </p>
 
             <form className="mt-6 grid gap-5">
               <div className="grid gap-1.5">
-                <label htmlFor="name" className="text-sm font-medium text-emerald-950">
+                <label htmlFor="name" className="text-sm font-bold text-emerald-950">
                   Full name
                 </label>
                 <input
@@ -118,7 +118,7 @@ export default function ContactPage() {
 
               <div className="grid gap-1.5 sm:grid-cols-2 sm:gap-4">
                 <div className="grid gap-1.5">
-                  <label htmlFor="email" className="text-sm font-medium text-emerald-950">
+                  <label htmlFor="email" className="text-sm font-bold text-emerald-950">
                     Email address
                   </label>
                   <input
@@ -130,7 +130,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div className="grid gap-1.5">
-                  <label htmlFor="phone" className="text-sm font-medium text-emerald-950">
+                  <label htmlFor="phone" className="text-sm font-bold text-emerald-950">
                     Phone (optional)
                   </label>
                   <input
@@ -143,7 +143,7 @@ export default function ContactPage() {
               </div>
 
               <div className="grid gap-1.5">
-                <label htmlFor="topic" className="text-sm font-medium text-emerald-950">
+                <label htmlFor="topic" className="text-sm font-bold text-emerald-950">
                   I&apos;m contacting you about
                 </label>
                 <select
@@ -164,7 +164,7 @@ export default function ContactPage() {
               </div>
 
               <div className="grid gap-1.5">
-                <label htmlFor="message" className="text-sm font-medium text-emerald-950">
+                <label htmlFor="message" className="text-sm font-bold text-emerald-950">
                   Message
                 </label>
                 <textarea
@@ -176,7 +176,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:justify-between pt-2">
-                <p className="text-xs text-emerald-950/70">
+                <p className="text-xs text-emerald-950 font-medium">
                   By submitting this form you consent to Youth Friendly Resource Center contacting
                   you about your enquiry. Your details are kept confidential.
                 </p>
@@ -194,7 +194,7 @@ export default function ContactPage() {
           <aside className="space-y-6">
             <div className="rounded-2xl bg-emerald-950 text-emerald-50 p-6 sm:p-7 shadow-xl">
               <h2 className="text-lg font-semibold">Visit our center</h2>
-              <p className="mt-2 text-sm text-emerald-50/80">
+              <p className="mt-2 text-sm text-emerald-50">
                 You can walk in during office hours for one-on-one support, referrals, and group
                 programs.
               </p>
@@ -226,7 +226,7 @@ export default function ContactPage() {
               <h3 className="text-sm font-semibold text-emerald-900 uppercase tracking-[0.18em]">
                 Connect online
               </h3>
-              <p className="mt-2 text-sm text-emerald-950/80">
+              <p className="mt-2 text-sm text-emerald-950 font-medium">
                 Stay updated on workshops, outreach programs, and volunteer opportunities.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
@@ -278,9 +278,9 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-dashed border-emerald-200 bg-emerald-50/60 p-5 text-xs text-emerald-950/75">
-              <p className="font-semibold text-emerald-900">Safety &amp; confidentiality</p>
-              <p className="mt-1.5">
+            <div className="rounded-2xl border border-dashed border-emerald-300 bg-emerald-50 p-5 text-xs text-emerald-950">
+              <p className="font-bold text-emerald-900">Safety &amp; confidentiality</p>
+              <p className="mt-1.5 font-medium">
                 If you are in immediate danger or crisis, please contact campus security or local
                 emergency services first. We provide non-judgmental, youth-friendly support but do
                 not replace professional medical or emergency services.

@@ -35,7 +35,7 @@ export default function SettingsPage() {
         <div className="max-w-5xl">
             <div className="mb-8">
                 <h1 className="text-2xl font-bold text-slate-900">Dashboard Settings</h1>
-                <p className="text-slate-500">Configure your administrative workspace and account preferences.</p>
+                <p className="text-slate-900 font-medium">Configure your administrative workspace and account preferences.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -60,7 +60,7 @@ export default function SettingsPage() {
                     <div className="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden text-sm">
                         <div className="p-6 border-b border-slate-100">
                             <h3 className="font-bold text-slate-900 mb-1">Public Profile</h3>
-                            <p className="text-slate-500">This information will be visible to other administrators.</p>
+                            <p className="text-slate-900 font-bold">This information will be visible to other administrators.</p>
                         </div>
 
                         <div className="p-6 space-y-6">
@@ -75,7 +75,7 @@ export default function SettingsPage() {
                                     <button className="ml-2 px-3 py-1.5 text-xs font-bold text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
                                         Remove
                                     </button>
-                                    <p className="mt-2 text-[10px] text-slate-400 uppercase font-bold tracking-widest">JPG, GIF or PNG. Max size 2MB</p>
+                                    <p className="mt-2 text-[10px] text-slate-900 uppercase font-bold tracking-widest">JPG, GIF or PNG. Max size 2MB</p>
                                 </div>
                             </div>
 
@@ -135,7 +135,7 @@ export default function SettingsPage() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-slate-900">Two-Factor Authentication</h3>
-                                    <p className="text-sm text-slate-500 mt-1">Add an extra layer of security to your admin account.</p>
+                                    <p className="text-sm text-slate-900 font-bold mt-1">Add an extra layer of security to your admin account.</p>
                                 </div>
                             </div>
                             <button className="px-3 py-1.5 text-xs font-bold text-emerald-600 bg-emerald-50 rounded-lg hover:bg-emerald-100 transition-all">

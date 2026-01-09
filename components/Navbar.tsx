@@ -46,7 +46,7 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-6 text-sm">
           {navItems.map((item) => (
             <li key={item.href}>
-              <Link href={item.href} className="hover:text-emerald-600 transition-colors">
+              <Link href={item.href} className="font-bold hover:text-emerald-600 transition-colors">
                 {item.label}
               </Link>
             </li>
@@ -61,7 +61,7 @@ export default function Navbar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="block py-2 hover:text-emerald-600"
+                  className="block py-2 font-bold hover:text-emerald-600"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}

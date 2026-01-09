@@ -10,7 +10,7 @@ export default async function FoodBankPage() {
   // Transform donor data to match the UI format
   const recentDonors = donorsData.slice(0, 6).map((donor: DonorWithDonations) => {
     // Get the most recent donation for this donor
-    const latestDonation = donor.donations.sort((a, b) =>
+    const latestDonation = donor.donations.sort((a: any, b: any) =>
       new Date(b.date).getTime() - new Date(a.date).getTime()
     )[0];
 

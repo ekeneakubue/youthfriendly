@@ -140,8 +140,8 @@ export default async function FoodBankPage() {
   ];
 
   // Calculate stats from real data
-  const totalDonationsAmount = donorsData.reduce((total, donor) => {
-    const donorTotal = donor.donations.reduce((sum, donation) => sum + (donation.amount || 0), 0);
+  const totalDonationsAmount = donorsData.reduce((total: number, donor: DonorWithDonations) => {
+    const donorTotal = donor.donations.reduce((sum: number, donation: Donation) => sum + (donation.amount || 0), 0);
     return total + donorTotal;
   }, 0);
 

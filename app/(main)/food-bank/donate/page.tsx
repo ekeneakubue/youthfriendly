@@ -134,8 +134,8 @@ export default function DonatePage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-900 rounded-lg  text-base text-black font-bold placeholder:text-black"
-                      placeholder="Full Name"
+                      className="w-full px-4 py-3 border border-gray-900 rounded-lg text-black font-bold placeholder:text-black"
+                      placeholder="Full Name"                    
                     />
                   </div>
 
@@ -150,8 +150,8 @@ export default function DonatePage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-900 rounded-lg text-base text-black font-bold placeholder:text-black"
-                      placeholder="johndoe@example.com"
+                      className="w-full px-4 py-3 border border-gray-900 rounded-lg text-black font-bold placeholder:text-black"
+                      placeholder="email@example.com"
                     />
                   </div>
 
@@ -166,7 +166,7 @@ export default function DonatePage() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-900 rounded-lg text-base text-black font-bold placeholder:text-black"
+                      className="w-full px-4 py-3 border border-gray-900 rounded-lg text-black font-bold placeholder:text-black"
                       placeholder="+234 801 234 5678"
                     />
                   </div>
@@ -245,7 +245,7 @@ export default function DonatePage() {
                         onChange={handleChange}
                         required
                         min="1000"
-                        className="w-full px-4 py-3 border border-gray-900 rounded-lg text-base text-black font-bold placeholder:text-black"
+                        className="w-full px-4 py-3 border border-gray-900 rounded-lg text-black font-bold placeholder:text-black"
                         placeholder="Enter amount"
                       />
                     </div>
@@ -304,7 +304,7 @@ export default function DonatePage() {
                         onChange={handleChange}
                         required
                         rows={3}
-                        className="w-full px-4 py-3 border border-gray-900 rounded-lg text-base text-black font-bold placeholder:text-black"
+                        className="w-full px-4 py-3 border border-gray-900 rounded-lg text-black font-bold placeholder:text-black"
                         placeholder="e.g., 5 bags of rice, 10kg of beans, 20 liters of cooking oil"
                       />
                     </div>
@@ -368,7 +368,7 @@ export default function DonatePage() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-900 rounded-lg text-base text-black font-bold placeholder:text-black"
+                  className="w-full px-4 py-3 border border-gray-900 rounded-lg text-black font-bold placeholder:text-black"
                   placeholder="All, First Year, students from your state, Constituency, Village, Department or faculty ..."
                 />
               </div>

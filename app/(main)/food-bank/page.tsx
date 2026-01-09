@@ -4,6 +4,38 @@ import { getDonors } from "@/lib/actions/donors";
 type DonorWithDonations = Awaited<ReturnType<typeof getDonors>>[number];
 type Donation = DonorWithDonations['donations'][number];
 
+type TransformedDonor = {
+  id: string;
+  name: string;
+  amount: number;
+  items: string;
+  date: string;
+  avatar: string;
+};
+
+type Beneficiary = {
+  id: string;
+  name: string;
+  university: string;
+  course: string;
+  year: string;
+  itemsReceived: string;
+  date: string;
+  avatar: string;
+};
+
+type DistributionEvent = {
+  id: string;
+  title: string;
+  description: string;
+  location: string;
+  date: string;
+  time: string;
+  beneficiaries: number;
+  status: string;
+  image: string;
+};
+
 export default async function FoodBankPage() {
   // Fetch real donors from database
   const donorsData = await getDonors();
@@ -227,7 +259,7 @@ export default async function FoodBankPage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {recentDonors.map((donor) => (
+          {recentDonors.map((donor: TransformedDonor) => (
             <div
               key={donor.id}
               className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
@@ -271,7 +303,7 @@ export default async function FoodBankPage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {beneficiaries.map((beneficiary) => (
+          {beneficiaries.map((beneficiary: Beneficiary) => (
             <div
               key={beneficiary.id}
               className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow"
@@ -315,7 +347,7 @@ export default async function FoodBankPage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {distributionEvents.map((event) => (
+          {distributionEvents.map((event: DistributionEvent) => (
             <div
               key={event.id}
               className={`rounded-2xl p-8 shadow-xl border-2 ${event.status === "upcoming"

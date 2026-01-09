@@ -1,7 +1,9 @@
 "use server";
 
 import { prisma } from "@/lib/db";
-import { ServiceStatus, ServiceCategory } from "@prisma/client";
+// Use local type definitions to avoid issues with @prisma/client generation on Vercel
+type ServiceStatus = "ACTIVE" | "DRAFT" | "HIDDEN";
+type ServiceCategory = "HEALTH" | "EDUCATION" | "WELFARE" | "SKILLS";
 import { revalidatePath } from "next/cache";
 
 export async function getServices() {
